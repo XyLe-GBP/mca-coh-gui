@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BootNotExistText" xml:space="preserve">
+    <value>The key could not be rewritten automatically because boot.bin does not exist.
+
+Write the file to the dongle without rewriting the key.</value>
+  </data>
+  <data name="CardFormattedText" xml:space="preserve">
+    <value>Memory Card Formated.</value>
+  </data>
+  <data name="CompleteRetrievingText" xml:space="preserve">
+    <value>Retrieval of the list is complete.</value>
+  </data>
+  <data name="DoneCaption" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="DumpCompletedText" xml:space="preserve">
+    <value>Dump is completed.</value>
+  </data>
+  <data name="DumpImageCompletedText" xml:space="preserve">
+    <value>Image dumped.</value>
+  </data>
+  <data name="DumpingAllText" xml:space="preserve">
+    <value>Dumping all files...</value>
+  </data>
+  <data name="DumpingDataText" xml:space="preserve">
+    <value>Dumping data from dongle...
+Please wait a moment.</value>
+  </data>
+  <data name="DumpingImageText" xml:space="preserve">
+    <value>Dumping image: {0}</value>
+  </data>
+  <data name="DumpingImgText" xml:space="preserve">
+    <value>Dumping image to the dongle...
+Please wait a moment.</value>
+  </data>
+  <data name="DumpingText" xml:space="preserve">
+    <value>Dumping: {0}</value>
+  </data>
+  <data name="ErrorCaption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorOccuredText" xml:space="preserve">
+    <value>An error has occurred.</value>
+  </data>
+  <data name="ErrorSpecifyDumpText" xml:space="preserve">
+    <value>The directory where the dump file is saved is not specified.</value>
+  </data>
+  <data name="FailedAttachText" xml:space="preserve">
+    <value>Failed to connect or attach the memory card adapter.
+Please check if the adapter is connected or the driver is installed.</value>
+  </data>
+  <data name="FailedKeyDumpText" xml:space="preserve">
+    <value>Key file dump failed.
+Abort process.</value>
+  </data>
+  <data name="FailedKeyVerifyText" xml:space="preserve">
+    <value>boot.bin data: {0}
+key data: {1}
+Key validation failed.
+Abort operation.</value>
+  </data>
+  <data name="FailedRetrievingText" xml:space="preserve">
+    <value>Failed to retrieve the list.</value>
+  </data>
+  <data name="Filter_AllFiles" xml:space="preserve">
+    <value>All Files (*.*)|*.*</value>
+  </data>
+  <data name="Filter_boot" xml:space="preserve">
+    <value>boot.bin|boot.bin</value>
+  </data>
+  <data name="Filter_Image" xml:space="preserve">
+    <value>Image (*.img)|*.img</value>
+  </data>
+  <data name="Filter_Key" xml:space="preserve">
+    <value>Key file (*.hex,*.key,*.bin)|*.hex;*.key;*.bin</value>
+  </data>
+  <data name="FormatCompletedText" xml:space="preserve">
+    <value>Dongle formatting is complete.</value>
+  </data>
+  <data name="FormatCompleteProgressText" xml:space="preserve">
+    <value>Formatting is complete...</value>
+  </data>
+  <data name="FormatConfirmText" xml:space="preserve">
+    <value>Trying to format dongle. If I do, all data in the dongle will be lost.
+This operation cannot be undone.
+Do you want to perform the formatting?</value>
+  </data>
+  <data name="FormatProgressText" xml:space="preserve">
+    <value>Formatting dongle...</value>
+  </data>
+  <data name="FormattedText" xml:space="preserve">
+    <value>Formatted memory card.
+Please wait a moment and try again.</value>
+  </data>
+  <data name="FormattingText" xml:space="preserve">
+    <value>Formatting...</value>
+  </data>
+  <data name="GetInfoText" xml:space="preserve">
+    <value>ID: {0}
+Name: {1}
+Maker: {2}
+</value>
+  </data>
+  <data name="InformationCaption" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InitializingText" xml:space="preserve">
+    <value>Initializing...</value>
+  </data>
+  <data name="KeyDumpCompletedText" xml:space="preserve">
+    <value>Key dump is completed.</value>
+  </data>
+  <data name="KeyDumpSuccessText" xml:space="preserve">
+    <value>Key dump is successfully.
+Dumped key data: {0}</value>
+  </data>
+  <data name="KeyVerifyedText" xml:space="preserve">
+    <value>boot.bin data: {0}
+key data: {1}
+Key verification succeeded.
+Continue to write the file to the dongle.</value>
+  </data>
+  <data name="NoresponseText" xml:space="preserve">
+    <value>There was no response from mca-coh.</value>
+  </data>
+  <data name="NotInsertText" xml:space="preserve">
+    <value>Sys2x6 dongle card not inserted or not recognized.</value>
+  </data>
+  <data name="ObtainedDongleInformationText" xml:space="preserve">
+    <value>Dongle information could not be obtained.</value>
+  </data>
+  <data name="ProcessingText" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="ProcessUnknownText" xml:space="preserve">
+    <value>Processing type unknown. Closes dialog after a few seconds.</value>
+  </data>
+  <data name="ProgressText" xml:space="preserve">
+    <value>{0} / {1} Files completed.</value>
+  </data>
+  <data name="RemoveCompletedText" xml:space="preserve">
+    <value>Remove is completed.</value>
+  </data>
+  <data name="RemoveConfirmText" xml:space="preserve">
+    <value>Remove '{0}' from dongle. Do you wish to continue?</value>
+  </data>
+  <data name="RemovingDataText" xml:space="preserve">
+    <value>Remove data to the dongle...
+Please wait a moment.</value>
+  </data>
+  <data name="RemovingText" xml:space="preserve">
+    <value>Removing: {0}</value>
+  </data>
+  <data name="RetrievingText" xml:space="preserve">
+    <value>Retrieving the list...</value>
+  </data>
+  <data name="SpecifyDumpFileCaption" xml:space="preserve">
+    <value>Specify where to save the dump file(s)</value>
+  </data>
+  <data name="SpecifyWriteFileCaption" xml:space="preserve">
+    <value>Specify where to write the file(s)</value>
+  </data>
+  <data name="UnableRecognizeText" xml:space="preserve">
+    <value>Unable to recognize dongle.
+PS2 memory card (SCPH-10020) cannot be read.
+Only Sys2x6 dongle (COH-H10020) can be read.</value>
+  </data>
+  <data name="WarningCaption" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WarningUnplugText" xml:space="preserve">
+    <value>Never unplug the dongle or unplug the memory card adapter while writing.
+The dongle may be damaged.'' Select 'Yes' to start writing to the Sys2x6 dongle.</value>
+  </data>
+  <data name="WritebootConfirmText" xml:space="preserve">
+    <value>The boot.bin key has been rewritten. Do you want to write boot.bin after dongle rewriting?</value>
+  </data>
+  <data name="WriteCompleteText" xml:space="preserve">
+    <value>Write is completed.</value>
+  </data>
+  <data name="WriteDataConfirmText" xml:space="preserve">
+    <value>Writes data to the dongle for Sys2x6.
+If the correct file is not written, the game will not be loaded. Do you wish to continue?</value>
+  </data>
+  <data name="WritedKeyText" xml:space="preserve">
+    <value>Key writed</value>
+  </data>
+  <data name="WriteKeyCompletedText" xml:space="preserve">
+    <value>Key write is completed.</value>
+  </data>
+  <data name="WritingDataText" xml:space="preserve">
+    <value>Writing data to the dongle...
+Please wait a moment.</value>
+  </data>
+  <data name="WritingText" xml:space="preserve">
+    <value>Writing: {0}</value>
+  </data>
+</root>
