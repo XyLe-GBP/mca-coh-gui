@@ -1,0 +1,211 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="fileFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="fileFToolStripMenuItem.Text" xml:space="preserve">
+    <value>ファイル (&amp;F)</value>
+  </data>
+  <data name="helpHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="helpHToolStripMenuItem.Text" xml:space="preserve">
+    <value>ヘルプ (&amp;H)</value>
+  </data>
+  <data name="settingsSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
+  </data>
+  <data name="settingsSToolStripMenuItem.Text" xml:space="preserve">
+    <value>設定 (&amp;S)</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 24</value>
+  </data>
+  <data name="exitXToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="exitXToolStripMenuItem.Text" xml:space="preserve">
+    <value>終了 (&amp;X)</value>
+  </data>
+  <data name="preferencesPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="preferencesPToolStripMenuItem.Text" xml:space="preserve">
+    <value>詳細設定 (&amp;P)</value>
+  </data>
+  <data name="button_Readlist.Text" xml:space="preserve">
+    <value>ファイルリストの読み込み</value>
+  </data>
+  <data name="columnHeader_Name.Text" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="columnHeader_Size.Text" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="columnHeader_Date.Text" xml:space="preserve">
+    <value>日付</value>
+  </data>
+  <data name="columnHeader_Time.Text" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="button_dump.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt</value>
+  </data>
+  <data name="button_dump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_dump.Text" xml:space="preserve">
+    <value>ダンプ</value>
+  </data>
+  <data name="button_dumpall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt, style=Bold</value>
+  </data>
+  <data name="button_dumpall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_dumpall.Text" xml:space="preserve">
+    <value>全てダンプ</value>
+  </data>
+  <data name="button_write.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt</value>
+  </data>
+  <data name="button_write.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_write.Text" xml:space="preserve">
+    <value>書き込み</value>
+  </data>
+  <data name="button_writeall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt, style=Bold</value>
+  </data>
+  <data name="button_writeall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_writeall.Text" xml:space="preserve">
+    <value>全て書き込み</value>
+  </data>
+  <data name="statusStrip_Information.Size" type="System.Drawing.Size, System.Drawing">
+    <value>549, 22</value>
+  </data>
+  <data name="toolStripStatusLabel_info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 17</value>
+  </data>
+  <data name="toolStripStatusLabel_info.Text" xml:space="preserve">
+    <value>レディ</value>
+  </data>
+  <data name="button_format.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt, style=Italic</value>
+  </data>
+  <data name="button_format.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_format.Text" xml:space="preserve">
+    <value>フォーマット</value>
+  </data>
+  <data name="button_keywrite.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI Semibold, 8.25pt, style=Bold</value>
+  </data>
+  <data name="button_keywrite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_keywrite.Text" xml:space="preserve">
+    <value>キーの書き込み</value>
+  </data>
+  <data name="button_keydump.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI Semibold, 8.25pt, style=Bold</value>
+  </data>
+  <data name="button_keydump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_keydump.Text" xml:space="preserve">
+    <value>キーのダンプ</value>
+  </data>
+  <data name="button_dumpimg.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt</value>
+  </data>
+  <data name="button_dumpimg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_dumpimg.Text" xml:space="preserve">
+    <value>イメージのダンプ</value>
+  </data>
+  <data name="button_getinfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt</value>
+  </data>
+  <data name="button_getinfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_getinfo.Text" xml:space="preserve">
+    <value>情報取得</value>
+  </data>
+  <data name="button_remove.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 8.25pt</value>
+  </data>
+  <data name="button_remove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 23</value>
+  </data>
+  <data name="button_remove.Text" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>549, 450</value>
+  </data>
+</root>
