@@ -29,231 +29,234 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preferencesPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button_Readlist = new System.Windows.Forms.Button();
-            this.listView_Readcontents = new System.Windows.Forms.ListView();
-            this.columnHeader_Name = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader_Size = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader_Date = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader_Time = new System.Windows.Forms.ColumnHeader();
-            this.button_dump = new System.Windows.Forms.Button();
-            this.button_dumpall = new System.Windows.Forms.Button();
-            this.button_write = new System.Windows.Forms.Button();
-            this.button_writeall = new System.Windows.Forms.Button();
-            this.statusStrip_Information = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel_info = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button_format = new System.Windows.Forms.Button();
-            this.button_keywrite = new System.Windows.Forms.Button();
-            this.button_keydump = new System.Windows.Forms.Button();
-            this.button_dumpimg = new System.Windows.Forms.Button();
-            this.button_getinfo = new System.Windows.Forms.Button();
-            this.button_remove = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip_Information.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            fileFToolStripMenuItem = new ToolStripMenuItem();
+            exitXToolStripMenuItem = new ToolStripMenuItem();
+            helpHToolStripMenuItem = new ToolStripMenuItem();
+            aboutAToolStripMenuItem = new ToolStripMenuItem();
+            settingsSToolStripMenuItem = new ToolStripMenuItem();
+            preferencesPToolStripMenuItem = new ToolStripMenuItem();
+            toolsTToolStripMenuItem = new ToolStripMenuItem();
+            backupsBToolStripMenuItem = new ToolStripMenuItem();
+            button_Readlist = new Button();
+            listView_Readcontents = new ListView();
+            columnHeader_Name = new ColumnHeader();
+            columnHeader_Size = new ColumnHeader();
+            columnHeader_Date = new ColumnHeader();
+            columnHeader_Time = new ColumnHeader();
+            button_dump = new Button();
+            button_dumpall = new Button();
+            button_write = new Button();
+            button_writeall = new Button();
+            statusStrip_Information = new StatusStrip();
+            toolStripStatusLabel_info = new ToolStripStatusLabel();
+            button_format = new Button();
+            button_keywrite = new Button();
+            button_keydump = new Button();
+            button_dumpimg = new Button();
+            button_getinfo = new Button();
+            button_remove = new Button();
+            menuStrip1.SuspendLayout();
+            statusStrip_Information.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileFToolStripMenuItem,
-            this.helpHToolStripMenuItem,
-            this.settingsSToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileFToolStripMenuItem, helpHToolStripMenuItem, settingsSToolStripMenuItem, toolsTToolStripMenuItem });
+            resources.ApplyResources(menuStrip1, "menuStrip1");
+            menuStrip1.Name = "menuStrip1";
             // 
             // fileFToolStripMenuItem
             // 
-            resources.ApplyResources(this.fileFToolStripMenuItem, "fileFToolStripMenuItem");
-            this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitXToolStripMenuItem});
-            this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
+            fileFToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitXToolStripMenuItem });
+            fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
+            resources.ApplyResources(fileFToolStripMenuItem, "fileFToolStripMenuItem");
             // 
             // exitXToolStripMenuItem
             // 
-            resources.ApplyResources(this.exitXToolStripMenuItem, "exitXToolStripMenuItem");
-            this.exitXToolStripMenuItem.Name = "exitXToolStripMenuItem";
-            this.exitXToolStripMenuItem.Click += new System.EventHandler(this.ExitXToolStripMenuItem_Click);
+            exitXToolStripMenuItem.Name = "exitXToolStripMenuItem";
+            resources.ApplyResources(exitXToolStripMenuItem, "exitXToolStripMenuItem");
+            exitXToolStripMenuItem.Click += ExitXToolStripMenuItem_Click;
             // 
             // helpHToolStripMenuItem
             // 
-            resources.ApplyResources(this.helpHToolStripMenuItem, "helpHToolStripMenuItem");
-            this.helpHToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.helpHToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutAToolStripMenuItem});
-            this.helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
+            helpHToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            helpHToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutAToolStripMenuItem });
+            helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
+            resources.ApplyResources(helpHToolStripMenuItem, "helpHToolStripMenuItem");
             // 
             // aboutAToolStripMenuItem
             // 
-            resources.ApplyResources(this.aboutAToolStripMenuItem, "aboutAToolStripMenuItem");
-            this.aboutAToolStripMenuItem.Name = "aboutAToolStripMenuItem";
-            this.aboutAToolStripMenuItem.Click += new System.EventHandler(this.AboutAToolStripMenuItem_Click);
+            aboutAToolStripMenuItem.Name = "aboutAToolStripMenuItem";
+            resources.ApplyResources(aboutAToolStripMenuItem, "aboutAToolStripMenuItem");
+            aboutAToolStripMenuItem.Click += AboutAToolStripMenuItem_Click;
             // 
             // settingsSToolStripMenuItem
             // 
-            resources.ApplyResources(this.settingsSToolStripMenuItem, "settingsSToolStripMenuItem");
-            this.settingsSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.preferencesPToolStripMenuItem});
-            this.settingsSToolStripMenuItem.Name = "settingsSToolStripMenuItem";
+            settingsSToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { preferencesPToolStripMenuItem });
+            settingsSToolStripMenuItem.Name = "settingsSToolStripMenuItem";
+            resources.ApplyResources(settingsSToolStripMenuItem, "settingsSToolStripMenuItem");
             // 
             // preferencesPToolStripMenuItem
             // 
-            resources.ApplyResources(this.preferencesPToolStripMenuItem, "preferencesPToolStripMenuItem");
-            this.preferencesPToolStripMenuItem.Name = "preferencesPToolStripMenuItem";
-            this.preferencesPToolStripMenuItem.Click += new System.EventHandler(this.PreferencesPToolStripMenuItem_Click);
+            preferencesPToolStripMenuItem.Name = "preferencesPToolStripMenuItem";
+            resources.ApplyResources(preferencesPToolStripMenuItem, "preferencesPToolStripMenuItem");
+            preferencesPToolStripMenuItem.Click += PreferencesPToolStripMenuItem_Click;
+            // 
+            // toolsTToolStripMenuItem
+            // 
+            toolsTToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { backupsBToolStripMenuItem });
+            toolsTToolStripMenuItem.Name = "toolsTToolStripMenuItem";
+            resources.ApplyResources(toolsTToolStripMenuItem, "toolsTToolStripMenuItem");
+            // 
+            // backupsBToolStripMenuItem
+            // 
+            backupsBToolStripMenuItem.Name = "backupsBToolStripMenuItem";
+            resources.ApplyResources(backupsBToolStripMenuItem, "backupsBToolStripMenuItem");
+            backupsBToolStripMenuItem.Click += BackupsBToolStripMenuItem_Click;
             // 
             // button_Readlist
             // 
-            resources.ApplyResources(this.button_Readlist, "button_Readlist");
-            this.button_Readlist.Name = "button_Readlist";
-            this.button_Readlist.UseVisualStyleBackColor = true;
-            this.button_Readlist.Click += new System.EventHandler(this.Button_Readlist_Click);
+            resources.ApplyResources(button_Readlist, "button_Readlist");
+            button_Readlist.Name = "button_Readlist";
+            button_Readlist.UseVisualStyleBackColor = true;
+            button_Readlist.Click += Button_Readlist_Click;
             // 
             // listView_Readcontents
             // 
-            resources.ApplyResources(this.listView_Readcontents, "listView_Readcontents");
-            this.listView_Readcontents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader_Name,
-            this.columnHeader_Size,
-            this.columnHeader_Date,
-            this.columnHeader_Time});
-            this.listView_Readcontents.Name = "listView_Readcontents";
-            this.listView_Readcontents.UseCompatibleStateImageBehavior = false;
-            this.listView_Readcontents.View = System.Windows.Forms.View.Details;
-            this.listView_Readcontents.SelectedIndexChanged += new System.EventHandler(this.ListView_Readcontents_SelectedIndexChanged);
+            listView_Readcontents.Columns.AddRange(new ColumnHeader[] { columnHeader_Name, columnHeader_Size, columnHeader_Date, columnHeader_Time });
+            resources.ApplyResources(listView_Readcontents, "listView_Readcontents");
+            listView_Readcontents.Name = "listView_Readcontents";
+            listView_Readcontents.UseCompatibleStateImageBehavior = false;
+            listView_Readcontents.View = View.Details;
+            listView_Readcontents.ColumnWidthChanging += ListView_Readcontents_ColumnWidthChanging;
+            listView_Readcontents.SelectedIndexChanged += ListView_Readcontents_SelectedIndexChanged;
             // 
             // columnHeader_Name
             // 
-            resources.ApplyResources(this.columnHeader_Name, "columnHeader_Name");
+            resources.ApplyResources(columnHeader_Name, "columnHeader_Name");
             // 
             // columnHeader_Size
             // 
-            resources.ApplyResources(this.columnHeader_Size, "columnHeader_Size");
+            resources.ApplyResources(columnHeader_Size, "columnHeader_Size");
             // 
             // columnHeader_Date
             // 
-            resources.ApplyResources(this.columnHeader_Date, "columnHeader_Date");
+            resources.ApplyResources(columnHeader_Date, "columnHeader_Date");
             // 
             // columnHeader_Time
             // 
-            resources.ApplyResources(this.columnHeader_Time, "columnHeader_Time");
+            resources.ApplyResources(columnHeader_Time, "columnHeader_Time");
             // 
             // button_dump
             // 
-            resources.ApplyResources(this.button_dump, "button_dump");
-            this.button_dump.Name = "button_dump";
-            this.button_dump.UseVisualStyleBackColor = true;
-            this.button_dump.Click += new System.EventHandler(this.Button_dump_Click);
+            resources.ApplyResources(button_dump, "button_dump");
+            button_dump.Name = "button_dump";
+            button_dump.UseVisualStyleBackColor = true;
+            button_dump.Click += Button_dump_Click;
             // 
             // button_dumpall
             // 
-            resources.ApplyResources(this.button_dumpall, "button_dumpall");
-            this.button_dumpall.Name = "button_dumpall";
-            this.button_dumpall.UseVisualStyleBackColor = true;
-            this.button_dumpall.Click += new System.EventHandler(this.Button_dumpall_Click);
+            resources.ApplyResources(button_dumpall, "button_dumpall");
+            button_dumpall.Name = "button_dumpall";
+            button_dumpall.UseVisualStyleBackColor = true;
+            button_dumpall.Click += Button_dumpall_Click;
             // 
             // button_write
             // 
-            resources.ApplyResources(this.button_write, "button_write");
-            this.button_write.Name = "button_write";
-            this.button_write.UseVisualStyleBackColor = true;
-            this.button_write.Click += new System.EventHandler(this.Button_write_Click);
+            resources.ApplyResources(button_write, "button_write");
+            button_write.Name = "button_write";
+            button_write.UseVisualStyleBackColor = true;
+            button_write.Click += Button_write_Click;
             // 
             // button_writeall
             // 
-            resources.ApplyResources(this.button_writeall, "button_writeall");
-            this.button_writeall.Name = "button_writeall";
-            this.button_writeall.UseVisualStyleBackColor = true;
-            this.button_writeall.Click += new System.EventHandler(this.Button_writeall_Click);
+            resources.ApplyResources(button_writeall, "button_writeall");
+            button_writeall.Name = "button_writeall";
+            button_writeall.UseVisualStyleBackColor = true;
+            button_writeall.Click += Button_writeall_Click;
             // 
             // statusStrip_Information
             // 
-            resources.ApplyResources(this.statusStrip_Information, "statusStrip_Information");
-            this.statusStrip_Information.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel_info});
-            this.statusStrip_Information.Name = "statusStrip_Information";
+            statusStrip_Information.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel_info });
+            resources.ApplyResources(statusStrip_Information, "statusStrip_Information");
+            statusStrip_Information.Name = "statusStrip_Information";
             // 
             // toolStripStatusLabel_info
             // 
-            resources.ApplyResources(this.toolStripStatusLabel_info, "toolStripStatusLabel_info");
-            this.toolStripStatusLabel_info.Name = "toolStripStatusLabel_info";
+            toolStripStatusLabel_info.Name = "toolStripStatusLabel_info";
+            resources.ApplyResources(toolStripStatusLabel_info, "toolStripStatusLabel_info");
             // 
             // button_format
             // 
-            resources.ApplyResources(this.button_format, "button_format");
-            this.button_format.Name = "button_format";
-            this.button_format.UseVisualStyleBackColor = true;
-            this.button_format.Click += new System.EventHandler(this.Button_format_Click);
+            resources.ApplyResources(button_format, "button_format");
+            button_format.Name = "button_format";
+            button_format.UseVisualStyleBackColor = true;
+            button_format.Click += Button_format_Click;
             // 
             // button_keywrite
             // 
-            resources.ApplyResources(this.button_keywrite, "button_keywrite");
-            this.button_keywrite.Name = "button_keywrite";
-            this.button_keywrite.UseVisualStyleBackColor = true;
-            this.button_keywrite.Click += new System.EventHandler(this.Button_keywrite_Click);
+            resources.ApplyResources(button_keywrite, "button_keywrite");
+            button_keywrite.Name = "button_keywrite";
+            button_keywrite.UseVisualStyleBackColor = true;
+            button_keywrite.Click += Button_keywrite_Click;
             // 
             // button_keydump
             // 
-            resources.ApplyResources(this.button_keydump, "button_keydump");
-            this.button_keydump.Name = "button_keydump";
-            this.button_keydump.UseVisualStyleBackColor = true;
-            this.button_keydump.Click += new System.EventHandler(this.Button_keydump_Click);
+            resources.ApplyResources(button_keydump, "button_keydump");
+            button_keydump.Name = "button_keydump";
+            button_keydump.UseVisualStyleBackColor = true;
+            button_keydump.Click += Button_keydump_Click;
             // 
             // button_dumpimg
             // 
-            resources.ApplyResources(this.button_dumpimg, "button_dumpimg");
-            this.button_dumpimg.Name = "button_dumpimg";
-            this.button_dumpimg.UseVisualStyleBackColor = true;
-            this.button_dumpimg.Click += new System.EventHandler(this.Button_dumpimg_Click);
+            resources.ApplyResources(button_dumpimg, "button_dumpimg");
+            button_dumpimg.Name = "button_dumpimg";
+            button_dumpimg.UseVisualStyleBackColor = true;
+            button_dumpimg.Click += Button_dumpimg_Click;
             // 
             // button_getinfo
             // 
-            resources.ApplyResources(this.button_getinfo, "button_getinfo");
-            this.button_getinfo.Name = "button_getinfo";
-            this.button_getinfo.UseVisualStyleBackColor = true;
-            this.button_getinfo.Click += new System.EventHandler(this.Button_getinfo_Click);
+            resources.ApplyResources(button_getinfo, "button_getinfo");
+            button_getinfo.Name = "button_getinfo";
+            button_getinfo.UseVisualStyleBackColor = true;
+            button_getinfo.Click += Button_getinfo_Click;
             // 
             // button_remove
             // 
-            resources.ApplyResources(this.button_remove, "button_remove");
-            this.button_remove.Name = "button_remove";
-            this.button_remove.UseVisualStyleBackColor = true;
-            this.button_remove.Click += new System.EventHandler(this.Button_remove_Click);
+            resources.ApplyResources(button_remove, "button_remove");
+            button_remove.Name = "button_remove";
+            button_remove.UseVisualStyleBackColor = true;
+            button_remove.Click += Button_remove_Click;
             // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button_remove);
-            this.Controls.Add(this.button_getinfo);
-            this.Controls.Add(this.button_dumpimg);
-            this.Controls.Add(this.button_keydump);
-            this.Controls.Add(this.button_keywrite);
-            this.Controls.Add(this.button_format);
-            this.Controls.Add(this.statusStrip_Information);
-            this.Controls.Add(this.button_writeall);
-            this.Controls.Add(this.button_write);
-            this.Controls.Add(this.button_dumpall);
-            this.Controls.Add(this.button_dump);
-            this.Controls.Add(this.listView_Readcontents);
-            this.Controls.Add(this.button_Readlist);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FormMain";
-            this.Load += new System.EventHandler(this.FormMain_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip_Information.ResumeLayout(false);
-            this.statusStrip_Information.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(button_remove);
+            Controls.Add(button_getinfo);
+            Controls.Add(button_dumpimg);
+            Controls.Add(button_keydump);
+            Controls.Add(button_keywrite);
+            Controls.Add(button_format);
+            Controls.Add(statusStrip_Information);
+            Controls.Add(button_writeall);
+            Controls.Add(button_write);
+            Controls.Add(button_dumpall);
+            Controls.Add(button_dump);
+            Controls.Add(listView_Readcontents);
+            Controls.Add(button_Readlist);
+            Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MainMenuStrip = menuStrip1;
+            Name = "FormMain";
+            Load += FormMain_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            statusStrip_Information.ResumeLayout(false);
+            statusStrip_Information.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -283,5 +286,7 @@
         private Button button_dumpimg;
         private Button button_getinfo;
         private Button button_remove;
+        private ToolStripMenuItem toolsTToolStripMenuItem;
+        private ToolStripMenuItem backupsBToolStripMenuItem;
     }
 }

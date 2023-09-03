@@ -1,7 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Drawing.Drawing2D;
 using System.Net.NetworkInformation;
-using static mca_coh_gui.Common;
+using mca_coh_gui.src;
+using static mca_coh_gui.src.Common;
 
 namespace mca_coh_gui
 {

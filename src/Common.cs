@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 using System.Xml;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.Management;
 
 namespace mca_coh_gui.src
 {
@@ -122,6 +123,33 @@ namespace mca_coh_gui.src
             {
                 DateTime dt = DateTime.Now;
                 return dt.Year + "-" + dt.Month + "-" + dt.Day + "-" + dt.Hour + "-" + dt.Minute + "-" + dt.Second;
+            }
+
+            /// <summary>
+            /// 指定したディレクトリ内のファイルも含めてディレクトリを削除する
+            /// </summary>
+            /// <param name="targetDirectoryPath">削除するディレクトリのパス</param>
+            public static void DeleteDirectory(string targetDirectoryPath)
+            {
+                if (!Directory.Exists(targetDirectoryPath))
+                {
+                    return;
+                }
+
+                string[] filePaths = Directory.GetFiles(targetDirectoryPath);
+                foreach (string filePath in filePaths)
+                {
+                    File.SetAttributes(filePath, FileAttributes.Normal);
+                    File.Delete(filePath);
+                }
+
+                string[] directoryPaths = Directory.GetDirectories(targetDirectoryPath);
+                foreach (string directoryPath in directoryPaths)
+                {
+                    DeleteDirectory(directoryPath);
+                }
+
+                Directory.Delete(targetDirectoryPath, false);
             }
 
             /// <summary>
@@ -333,6 +361,7 @@ namespace mca_coh_gui.src
                             if (!IsGetInfo)
                             {
                                 name = CurrentDir + @"\keys\key_" + SFDRandomNumber() + ".hex";
+                                DumpTitle(Path.GetDirectoryName(name) + @"\title.txt");
                             }
                             else
                             {
@@ -455,6 +484,19 @@ namespace mca_coh_gui.src
                 return outp;
             }
 
+            public static void DumpTitle(string file)
+            {
+                ProcessStartInfo? psi = new()
+                {
+                    FileName = ResourcesDir + @"\mca-coh.exe",
+                    Arguments = "-x title.txt " + file,
+                    CreateNoWindow = true,
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                };
+                Process? p = Process.Start(psi);
+            }
+
             /// <summary>
             /// ドングルのtitle.txtから情報を取得
             /// </summary>
@@ -494,6 +536,32 @@ namespace mca_coh_gui.src
                 else
                 {
                     return;
+                }
+            }
+
+            /// <summary>
+            /// 既に存在するtitle.txtから情報を取得
+            /// </summary>
+            /// <param name="path">title.txtのフルパス</param>
+            /// <param name="buffers">戻り値を格納するstring配列</param>
+            public static void GetDongleTitleAlreadyTxt(string path, string[] buffers)
+            {
+                using StreamReader sr = new(path);
+                string readtitle = sr.ReadToEnd();
+                sr.Close();
+                readtitle = readtitle.Replace("\n", "\r");
+                readtitle = readtitle.Trim('\r');
+                string[] readtitlelist = readtitle.Split('\r');
+                foreach (var item in readtitlelist)
+                {
+                    if (item.Contains("MAKER:"))
+                    {
+                        buffers[0] = item.Replace("MAKER:", "");
+                    }
+                    if (item.Contains("TITLE:NM"))
+                    {
+                        buffers[1] = item.Replace("TITLE:NM", "NM");
+                    }
                 }
             }
 
@@ -802,6 +870,70 @@ namespace mca_coh_gui.src
 
                 return memcmp(a, b, new UIntPtr((uint)a.Length)) == 0;
             }
+
+            public static bool Checkdriver()
+            {
+                System.Management.SelectQuery query = new("Win32_SystemDriver");
+                // 特定のドライバーを検索したい場合は query.Condition で条件を指定。
+                query.Condition = "Name = 'MemoryCard Adaptor with uusbd Driver (x64)'";
+                System.Management.ManagementObjectSearcher searcher = new(query);
+                var drivers = searcher.Get();
+                foreach (var d in drivers)
+                {
+                    Debug.WriteLine("=== Properties ===");
+                    foreach (var p in d.Properties)
+                    {
+                        // d.p["プロパティ名"] は d["プロパティ名"] と同じ 
+                        Debug.WriteLine(p.Name + ":" + p.Value);
+                    }
+
+                    Debug.WriteLine("=== System Propertides ===");
+                    foreach (var p in d.SystemProperties)
+                    {
+                        Debug.WriteLine(p.Name + ":" + p.Value);
+                    }
+                    Debug.WriteLine("=== Qualifiers ===");
+                    foreach (var q in d.Qualifiers)
+                    {
+                        Debug.WriteLine(q.Name + ":" + q.Value);
+                    }
+                }
+                return false;
+            }
+
+            public static List<USBDeviceInfo> GetUSBDevices()
+            {
+                List<USBDeviceInfo> devices = new List<USBDeviceInfo>();
+
+                ManagementObjectCollection collection;
+                using (var searcher = new ManagementObjectSearcher(@"Select * From Win32_USBHub"))
+                    collection = searcher.Get();
+
+                foreach (var device in collection)
+                {
+                    devices.Add(new USBDeviceInfo(
+                    (string)device.GetPropertyValue("DeviceID"),
+                    (string)device.GetPropertyValue("PNPDeviceID"),
+                    (string)device.GetPropertyValue("Description")
+                    ));
+                }
+
+                collection.Dispose();
+                return devices;
+            }
+        }
+
+        public class USBDeviceInfo
+        {
+            public USBDeviceInfo(string deviceID, string pnpDeviceID, string description)
+            {
+                this.DeviceID = deviceID;
+                this.PnpDeviceID = pnpDeviceID;
+                this.Description = description;
+            }
+            public string DeviceID { get; private set; }
+            public string PnpDeviceID { get; private set; }
+            public string Description { get; private set; }
         }
 
         public class Config

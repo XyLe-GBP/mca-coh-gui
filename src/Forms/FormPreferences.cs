@@ -1,4 +1,4 @@
-﻿using static mca_coh_gui.Common;
+﻿using static mca_coh_gui.src.Common;
 using mca_coh_gui.Localizations;
 using System.Runtime.CompilerServices;
 

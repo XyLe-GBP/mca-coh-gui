@@ -1,7 +1,9 @@
 using System.Diagnostics;
 using System.Text.RegularExpressions;
-using static mca_coh_gui.Common;
+using static mca_coh_gui.src.Common;
 using mca_coh_gui.Localizations;
+using mca_coh_gui.src;
+using mca_coh_gui.src.Forms;
 
 namespace mca_coh_gui
 {
@@ -31,10 +33,18 @@ namespace mca_coh_gui
             }
 
             ReInitializeConfig();
+
+            string[] buffer = new string[1];
+            if (!CheckUSBDevice(buffer))
+            {
+                MessageBox.Show(this, buffer[0], "Critical Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
         }
 
         private void Button_Readlist_Click(object sender, EventArgs e)
         {
+
             toolStripStatusLabel_info.Text = Localization.RetrievingText;
 
             button_getinfo.Enabled = false;
@@ -59,7 +69,8 @@ namespace mca_coh_gui
                 RedirectStandardOutput = true,
             };
             Process? p = Process.Start(psi);
-            if (p is not null ) {
+            if (p is not null)
+            {
                 List<string> list = new();
                 read = p.StandardOutput.ReadToEnd();
                 read = read.Replace(Environment.NewLine, "\r");
@@ -102,7 +113,7 @@ namespace mca_coh_gui
                         list.Add(matchname.Value.Trim());
                         string[] data = { matchname.Value.Trim(), matchsize.Value, matchdate.Value, matchclock.Value };
                         listView_Readcontents.Items.Add(new ListViewItem(data));
-                        
+
                     }
 
                 };
@@ -148,7 +159,7 @@ namespace mca_coh_gui
             Process? p = Process.Start(psi);
             if (p is not null)
             {
-                
+
                 string? read, title = null, info = string.Format(Localization.GetInfoText, dongleinfo[1], Utils.GetGameName(dongleinfo[1]), dongleinfo[0]);
                 read = p.StandardOutput.ReadToEnd();
                 read = read.Replace(Environment.NewLine, "\r");
@@ -349,12 +360,14 @@ namespace mca_coh_gui
                             }
 
                             Utils.DumpBootFile(ResourcesDir + @"\boot.bin");
+                            string[] dummy = new string[2];
+                            Utils.GetDongleTitle(dummy);
                             if (File.Exists(ResourcesDir + @"\boot.bin"))
                             {
                                 string dmp_path = Utils.DumpOrWriteKeyWithAutoKey(ResourcesDir + @"\boot.bin", 0);
                                 File.Delete(ResourcesDir + @"\boot.bin");
 
-                                OpenProgressDlg(6,1);
+                                OpenProgressDlg(6, 1);
 
                                 if (File.Exists(ChangedBootPath + @"\boot.bin"))
                                 {
@@ -365,7 +378,17 @@ namespace mca_coh_gui
                                 {
                                     File.Copy(fbd.SelectedPath + @"\boot.bin", ChangedBootPath + @"\boot.bin");
                                 }
-                                
+
+                                if (File.Exists(ChangedBootPath + @"\title.txt"))
+                                {
+                                    File.Delete(ChangedBootPath + @"\title.txt");
+                                    File.Copy(CurrentDir + @"\title.txt", ChangedBootPath + @"\title.txt");
+                                }
+                                else
+                                {
+                                    File.Copy(CurrentDir + @"\title.txt", ChangedBootPath + @"\title.txt");
+                                }
+
                                 if (File.Exists(dmp_path))
                                 {
                                     string[] data = new string[2];
@@ -680,7 +703,7 @@ namespace mca_coh_gui
             return false;
         }
 
-        private void OpenProgressDlg(int type, int count)
+        private static void OpenProgressDlg(int type, int count)
         {
             Count = count;
             ProgressType = type;
@@ -753,6 +776,49 @@ namespace mca_coh_gui
             {
                 fixeddir = Config.Entry["SETTINGS_DumpLocationDirectory"].Value;
             }
+        }
+
+        private void BackupsBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using FormBackups formBackups = new();
+            formBackups.ShowDialog();
+        }
+
+        private bool CheckUSBDevice(string[] Infobuffer)
+        {
+            var usbDevices = Utils.GetUSBDevices();
+
+            foreach (var usbDevice in usbDevices)
+            {
+                Debug.WriteLine("Device ID: {0}, PNP Device ID: {1}, Description: {2}",
+                    usbDevice.DeviceID, usbDevice.PnpDeviceID, usbDevice.Description);
+                if (usbDevice.Description.Contains("MemoryCard Adaptor with uusbd Driver (x64)") && usbDevice.DeviceID.Contains(@"USB\VID_054C&PID_02EA"))
+                {
+                    return true;
+                }
+                else if (usbDevice.Description.Contains("MemoryCard Adaptor with uusbd Driver") && usbDevice.DeviceID.Contains(@"USB\VID_054C&PID_02EA"))
+                {
+                    Infobuffer[0] = "'" + usbDevice.Description + "' is not the proper driver.";
+                    return false;
+                }
+                else if (usbDevice.DeviceID.Contains(@"USB\VID_054C&PID_02EA"))
+                {
+                    Infobuffer[0] = "The device is connected, but the driver is not installed.";
+                    return false;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            Infobuffer[0] = "The application cannot be started because the memory card adapter is not connected or the appropriate driver is not installed.";
+            return false;
+        }
+
+        private void ListView_Readcontents_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = listView_Readcontents.Columns[e.ColumnIndex].Width;
         }
     }
 }

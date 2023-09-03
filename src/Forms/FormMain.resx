@@ -1,4 +1,64 @@
-﻿<root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -57,85 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_dumpimg.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;button_remove.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_getinfo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="listView_Readcontents.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button_keydump.Name" xml:space="preserve">
-    <value>button_keydump</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel_info.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_Date.Name" xml:space="preserve">
-    <value>columnHeader_Date</value>
-  </data>
-  <data name="button_Readlist.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="button_writeall.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="button_keywrite.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;settingsSToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_Size.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="statusStrip_Information.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 428</value>
+  <data name="exitXToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
   </data>
-  <data name="&gt;&gt;columnHeader_Name.Name" xml:space="preserve">
-    <value>columnHeader_Name</value>
+  <data name="exitXToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit (&amp;X)</value>
   </data>
-  <data name="&gt;&gt;button_remove.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="fileFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 20</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fileFToolStripMenuItem.Text" xml:space="preserve">
+    <value>File (&amp;F)</value>
   </data>
-  <data name="&gt;&gt;button_dump.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="aboutAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>539, 450</value>
+  <data name="aboutAToolStripMenuItem.Text" xml:space="preserve">
+    <value>About (&amp;A)</value>
   </data>
-  <data name="&gt;&gt;button_keywrite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="columnHeader_Date.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="&gt;&gt;aboutAToolStripMenuItem.Name" xml:space="preserve">
-    <value>aboutAToolStripMenuItem</value>
-  </data>
-  <data name="button_write.Text" xml:space="preserve">
-    <value>Write</value>
-  </data>
-  <data name="button_remove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button_keydump.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;button_writeall.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="helpHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
   </data>
   <data name="helpHToolStripMenuItem.Text" xml:space="preserve">
     <value>Help (&amp;H)</value>
@@ -143,458 +148,537 @@
   <data name="preferencesPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>153, 22</value>
   </data>
-  <data name="&gt;&gt;button_keywrite.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;button_remove.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="aboutAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="button_dumpall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 114</value>
-  </data>
-  <data name="&gt;&gt;preferencesPToolStripMenuItem.Name" xml:space="preserve">
-    <value>preferencesPToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;button_Readlist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_dumpall.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;fileFToolStripMenuItem.Name" xml:space="preserve">
-    <value>fileFToolStripMenuItem</value>
-  </data>
-  <data name="columnHeader_Name.Text" xml:space="preserve">
-    <value>File Name</value>
-  </data>
-  <data name="button_keydump.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;button_format.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="columnHeader_Time.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="button_keydump.Text" xml:space="preserve">
-    <value>Dump key</value>
-  </data>
-  <data name="statusStrip_Information.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
   <data name="preferencesPToolStripMenuItem.Text" xml:space="preserve">
     <value>Preferences (&amp;P)</value>
   </data>
-  <data name="button_dump.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="settingsSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
   </data>
-  <data name="button_remove.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="settingsSToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings (&amp;S)</value>
   </data>
-  <data name="statusStrip_Information.Text" xml:space="preserve">
-    <value>Ready.</value>
+  <data name="backupsBToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
   </data>
-  <data name="&gt;&gt;button_dump.Name" xml:space="preserve">
-    <value>button_dump</value>
+  <data name="backupsBToolStripMenuItem.Text" xml:space="preserve">
+    <value>Backups (&amp;B)</value>
   </data>
-  <data name="button_writeall.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 9pt, style=Bold</value>
+  <data name="toolsTToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
   </data>
-  <data name="button_dumpimg.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="toolsTToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tools (&amp;T)</value>
   </data>
-  <data name="&gt;&gt;button_writeall.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="button_dumpall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;listView_Readcontents.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_remove.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;button_getinfo.Name" xml:space="preserve">
-    <value>button_getinfo</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="button_Readlist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 23</value>
-  </data>
-  <data name="toolStripStatusLabel_info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 17</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_Size.Name" xml:space="preserve">
-    <value>columnHeader_Size</value>
-  </data>
-  <data name="&gt;&gt;button_format.Name" xml:space="preserve">
-    <value>button_format</value>
-  </data>
-  <data name="button_format.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button_dumpall.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 9pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;listView_Readcontents.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="button_write.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 143</value>
-  </data>
-  <data name="button_keydump.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI Semibold, 9pt, style=Bold</value>
-  </data>
-  <data name="button_format.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="columnHeader_Size.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="&gt;&gt;button_Readlist.Name" xml:space="preserve">
-    <value>button_Readlist</value>
-  </data>
-  <data name="&gt;&gt;button_write.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;helpHToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_dumpall.Name" xml:space="preserve">
-    <value>button_dumpall</value>
-  </data>
-  <data name="&gt;&gt;fileFToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_keydump.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="columnHeader_Name.Width" type="System.Int32, mscorlib">
-    <value>160</value>
-  </data>
-  <data name="&gt;&gt;toolStripStatusLabel_info.Name" xml:space="preserve">
-    <value>toolStripStatusLabel_info</value>
-  </data>
-  <data name="&gt;&gt;button_keydump.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button_dump.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_keywrite.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;button_format.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="button_keywrite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;button_remove.Name" xml:space="preserve">
-    <value>button_remove</value>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>539, 24</value>
   </data>
-  <data name="fileFToolStripMenuItem.Text" xml:space="preserve">
-    <value>File (&amp;F)</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;button_dumpall.Parent" xml:space="preserve">
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="button_Readlist.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>
   </data>
-  <data name="button_format.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="button_Readlist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 23</value>
   </data>
-  <data name="button_keywrite.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI Semibold, 9pt, style=Bold</value>
+  <data name="button_Readlist.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button_Readlist.Text" xml:space="preserve">
+    <value>Read File List</value>
+  </data>
+  <data name="&gt;&gt;button_Readlist.Name" xml:space="preserve">
+    <value>button_Readlist</value>
+  </data>
+  <data name="&gt;&gt;button_Readlist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Readlist.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_Readlist.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="columnHeader_Name.Text" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="columnHeader_Name.Width" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="columnHeader_Size.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="columnHeader_Size.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="columnHeader_Date.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="columnHeader_Date.Width" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="columnHeader_Time.Text" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="columnHeader_Time.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="listView_Readcontents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 56</value>
+  </data>
+  <data name="listView_Readcontents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 356</value>
+  </data>
+  <data name="listView_Readcontents.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;listView_Readcontents.Name" xml:space="preserve">
+    <value>listView_Readcontents</value>
+  </data>
+  <data name="&gt;&gt;listView_Readcontents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView_Readcontents.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listView_Readcontents.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="button_dump.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_dump.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 85</value>
+  </data>
+  <data name="button_dump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_dump.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="button_dump.Text" xml:space="preserve">
+    <value>Dump</value>
+  </data>
+  <data name="&gt;&gt;button_dump.Name" xml:space="preserve">
+    <value>button_dump</value>
+  </data>
+  <data name="&gt;&gt;button_dump.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_dump.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_dump.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="button_dumpall.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_dumpall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 9pt, style=Bold</value>
+  </data>
+  <data name="button_dumpall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 114</value>
+  </data>
+  <data name="button_dumpall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_dumpall.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="button_dumpall.Text" xml:space="preserve">
+    <value>Dump All</value>
+  </data>
+  <data name="&gt;&gt;button_dumpall.Name" xml:space="preserve">
+    <value>button_dumpall</value>
   </data>
   <data name="&gt;&gt;button_dumpall.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_format.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 389</value>
+  <data name="&gt;&gt;button_dumpall.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="aboutAToolStripMenuItem.Text" xml:space="preserve">
-    <value>About (&amp;A)</value>
+  <data name="&gt;&gt;button_dumpall.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;columnHeader_Date.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button_write.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="statusStrip_Information.Size" type="System.Drawing.Size, System.Drawing">
-    <value>539, 22</value>
+  <data name="button_write.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 143</value>
   </data>
-  <data name="&gt;&gt;button_format.Parent" xml:space="preserve">
+  <data name="button_write.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_write.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="button_write.Text" xml:space="preserve">
+    <value>Write</value>
+  </data>
+  <data name="&gt;&gt;button_write.Name" xml:space="preserve">
+    <value>button_write</value>
+  </data>
+  <data name="&gt;&gt;button_write.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_write.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button_write.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="button_remove.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="button_writeall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;button_keywrite.Name" xml:space="preserve">
-    <value>button_keywrite</value>
-  </data>
-  <data name="&gt;&gt;helpHToolStripMenuItem.Name" xml:space="preserve">
-    <value>helpHToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="button_dump.Enabled" type="System.Boolean, mscorlib">
+  <data name="button_writeall.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="button_getinfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="button_writeall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 9pt, style=Bold</value>
   </data>
   <data name="button_writeall.Location" type="System.Drawing.Point, System.Drawing">
     <value>457, 172</value>
   </data>
-  <data name="button_keydump.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="button_writeall.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;button_Readlist.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;listView_Readcontents.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;statusStrip_Information.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="button_format.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Yu Gothic UI, 9pt, style=Italic</value>
-  </data>
-  <data name="button_keydump.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 331</value>
-  </data>
-  <data name="button_getinfo.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;button_dumpimg.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;statusStrip_Information.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_dumpall.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="button_keywrite.Text" xml:space="preserve">
-    <value>Rewrite key</value>
-  </data>
-  <data name="button_getinfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 27</value>
-  </data>
-  <data name="button_dumpall.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="button_write.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;statusStrip_Information.ZOrder" xml:space="preserve">
+  <data name="button_writeall.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="button_keywrite.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 360</value>
-  </data>
-  <data name="button_dumpimg.Text" xml:space="preserve">
-    <value>Dump Img</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>mca-coh GUI</value>
-  </data>
-  <data name="&gt;&gt;button_Readlist.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="button_writeall.Text" xml:space="preserve">
+    <value>Write All</value>
   </data>
   <data name="&gt;&gt;button_writeall.Name" xml:space="preserve">
     <value>button_writeall</value>
   </data>
-  <data name="columnHeader_Time.Text" xml:space="preserve">
-    <value>Time</value>
-  </data>
-  <data name="&gt;&gt;button_getinfo.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_writeall.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="helpHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
+  <data name="&gt;&gt;button_writeall.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="button_dumpimg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 302</value>
+  <data name="&gt;&gt;button_writeall.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <metadata name="statusStrip_Information.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>132, 17</value>
+  </metadata>
+  <data name="toolStripStatusLabel_info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 17</value>
   </data>
-  <data name="&gt;&gt;exitXToolStripMenuItem.Name" xml:space="preserve">
-    <value>exitXToolStripMenuItem</value>
+  <data name="toolStripStatusLabel_info.Text" xml:space="preserve">
+    <value>Ready</value>
   </data>
-  <data name="settingsSToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings (&amp;S)</value>
+  <data name="statusStrip_Information.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 428</value>
   </data>
-  <data name="&gt;&gt;button_dumpimg.Name" xml:space="preserve">
-    <value>button_dumpimg</value>
+  <data name="statusStrip_Information.Size" type="System.Drawing.Size, System.Drawing">
+    <value>539, 22</value>
   </data>
-  <data name="columnHeader_Size.Width" type="System.Int32, mscorlib">
-    <value>80</value>
+  <data name="statusStrip_Information.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="statusStrip_Information.Text" xml:space="preserve">
+    <value>Ready.</value>
   </data>
-  <data name="button_dumpall.Text" xml:space="preserve">
-    <value>Dump All</value>
+  <data name="&gt;&gt;statusStrip_Information.Name" xml:space="preserve">
+    <value>statusStrip_Information</value>
   </data>
-  <data name="&gt;&gt;listView_Readcontents.Name" xml:space="preserve">
-    <value>listView_Readcontents</value>
+  <data name="&gt;&gt;statusStrip_Information.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip_Information.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip_Information.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="button_format.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_format.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 9pt, style=Italic</value>
+  </data>
+  <data name="button_format.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 389</value>
+  </data>
+  <data name="button_format.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_format.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="button_format.Text" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="&gt;&gt;button_format.Name" xml:space="preserve">
+    <value>button_format</value>
+  </data>
+  <data name="&gt;&gt;button_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_format.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_format.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="button_keywrite.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_keywrite.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="button_keywrite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 360</value>
+  </data>
+  <data name="button_keywrite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_keywrite.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="button_keywrite.Text" xml:space="preserve">
+    <value>Rewrite key</value>
+  </data>
+  <data name="&gt;&gt;button_keywrite.Name" xml:space="preserve">
+    <value>button_keywrite</value>
+  </data>
+  <data name="&gt;&gt;button_keywrite.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button_keywrite.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;button_keywrite.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button_keydump.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_keydump.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI Semibold, 9pt, style=Bold</value>
+  </data>
+  <data name="button_keydump.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 331</value>
+  </data>
+  <data name="button_keydump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_keydump.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="button_keydump.Text" xml:space="preserve">
+    <value>Dump key</value>
+  </data>
+  <data name="&gt;&gt;button_keydump.Name" xml:space="preserve">
+    <value>button_keydump</value>
+  </data>
+  <data name="&gt;&gt;button_keydump.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_keydump.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_keydump.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button_dumpimg.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_dumpimg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 302</value>
+  </data>
+  <data name="button_dumpimg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_dumpimg.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="button_dumpimg.Text" xml:space="preserve">
+    <value>Dump Img</value>
+  </data>
+  <data name="&gt;&gt;button_dumpimg.Name" xml:space="preserve">
+    <value>button_dumpimg</value>
+  </data>
+  <data name="&gt;&gt;button_dumpimg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_dumpimg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_dumpimg.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="button_getinfo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="button_getinfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>457, 27</value>
+  </data>
+  <data name="button_getinfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_getinfo.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="button_getinfo.Text" xml:space="preserve">
+    <value>Get Info</value>
+  </data>
+  <data name="&gt;&gt;button_getinfo.Name" xml:space="preserve">
+    <value>button_getinfo</value>
+  </data>
+  <data name="&gt;&gt;button_getinfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_getinfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_getinfo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button_remove.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="button_remove.Location" type="System.Drawing.Point, System.Drawing">
     <value>457, 215</value>
   </data>
-  <data name="listView_Readcontents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 56</value>
+  <data name="button_remove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
+  <data name="button_remove.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="columnHeader_Date.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+  <data name="button_remove.Text" xml:space="preserve">
+    <value>Remove</value>
   </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;button_remove.Name" xml:space="preserve">
+    <value>button_remove</value>
   </data>
-  <data name="&gt;&gt;button_dump.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;button_remove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="exitXToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit (&amp;X)</value>
+  <data name="&gt;&gt;button_remove.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="button_writeall.Text" xml:space="preserve">
-    <value>Write All</value>
+  <data name="&gt;&gt;button_remove.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;aboutAToolStripMenuItem.Type" xml:space="preserve">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>539, 450</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>mca-coh GUI</value>
+  </data>
+  <data name="&gt;&gt;fileFToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileFToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileFToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_write.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button_Readlist.Text" xml:space="preserve">
-    <value>Read File List</value>
-  </data>
-  <data name="button_writeall.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="button_write.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="button_getinfo.Text" xml:space="preserve">
-    <value>Get Info</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_Time.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_format.Text" xml:space="preserve">
-    <value>Format</value>
-  </data>
-  <data name="button_dump.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="exitXToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 22</value>
-  </data>
-  <data name="toolStripStatusLabel_info.Text" xml:space="preserve">
-    <value>Ready</value>
-  </data>
-  <data name="button_dumpimg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;button_dumpimg.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="fileFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 20</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;button_getinfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="settingsSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="&gt;&gt;button_dumpimg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listView_Readcontents.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 356</value>
-  </data>
-  <data name="&gt;&gt;statusStrip_Information.Name" xml:space="preserve">
-    <value>statusStrip_Information</value>
-  </data>
-  <data name="&gt;&gt;button_writeall.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_dump.Location" type="System.Drawing.Point, System.Drawing">
-    <value>457, 85</value>
-  </data>
-  <data name="&gt;&gt;columnHeader_Time.Name" xml:space="preserve">
-    <value>columnHeader_Time</value>
-  </data>
-  <data name="&gt;&gt;button_keydump.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_write.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;exitXToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitXToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;exitXToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button_dump.Text" xml:space="preserve">
-    <value>Dump</value>
+  <data name="&gt;&gt;helpHToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpHToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;preferencesPToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;helpHToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_write.Name" xml:space="preserve">
-    <value>button_write</value>
+  <data name="&gt;&gt;aboutAToolStripMenuItem.Name" xml:space="preserve">
+    <value>aboutAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aboutAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;settingsSToolStripMenuItem.Name" xml:space="preserve">
     <value>settingsSToolStripMenuItem</value>
   </data>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="statusStrip_Information.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
+  <data name="&gt;&gt;settingsSToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preferencesPToolStripMenuItem.Name" xml:space="preserve">
+    <value>preferencesPToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;preferencesPToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsTToolStripMenuItem.Name" xml:space="preserve">
+    <value>toolsTToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolsTToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backupsBToolStripMenuItem.Name" xml:space="preserve">
+    <value>backupsBToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;backupsBToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Name.Name" xml:space="preserve">
+    <value>columnHeader_Name</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Size.Name" xml:space="preserve">
+    <value>columnHeader_Size</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Size.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Date.Name" xml:space="preserve">
+    <value>columnHeader_Date</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Time.Name" xml:space="preserve">
+    <value>columnHeader_Time</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Time.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel_info.Name" xml:space="preserve">
+    <value>toolStripStatusLabel_info</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel_info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
