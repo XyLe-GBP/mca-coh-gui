@@ -122,14 +122,35 @@
 
 Write the file to the dongle without rewriting the key.</value>
   </data>
+  <data name="CancelledCaption" xml:space="preserve">
+    <value>The process was aborted.</value>
+  </data>
   <data name="CardFormattedText" xml:space="preserve">
     <value>Memory Card Formated.</value>
   </data>
   <data name="CompleteRetrievingText" xml:space="preserve">
     <value>Retrieval of the list is complete.</value>
   </data>
+  <data name="CurrentCaption" xml:space="preserve">
+    <value>Current version:</value>
+  </data>
+  <data name="DeviceNotConnectedCaption" xml:space="preserve">
+    <value>The application cannot be started because the device is not connected.</value>
+  </data>
   <data name="DoneCaption" xml:space="preserve">
     <value>Done</value>
+  </data>
+  <data name="DownloadAbortConfirmCaption" xml:space="preserve">
+    <value>Download is currently in progress. If you stop the download, the downloaded data will be lost.
+Are you sure you want to continue?</value>
+  </data>
+  <data name="DownloadingCaption" xml:space="preserve">
+    <value>{0} KiB out of {1} KiB downloaded.</value>
+  </data>
+  <data name="DriverNotInstalledCaption" xml:space="preserve">
+    <value>The device is connected, but the driver is not installed.
+
+The application cannot be started.</value>
   </data>
   <data name="DumpCompletedText" xml:space="preserve">
     <value>Dump is completed.</value>
@@ -213,6 +234,9 @@ Please wait a moment and try again.</value>
   <data name="FormattingText" xml:space="preserve">
     <value>Formatting...</value>
   </data>
+  <data name="FormDownloadingCaption" xml:space="preserve">
+    <value>Downloading...</value>
+  </data>
   <data name="GetInfoText" xml:space="preserve">
     <value>ID: {0}
 Name: {1}
@@ -237,6 +261,18 @@ Dumped key data: {0}</value>
 key data: {1}
 Key verification succeeded.
 Continue to write the file to the dongle.</value>
+  </data>
+  <data name="LatestCaption" xml:space="preserve">
+    <value>Latest version:</value>
+  </data>
+  <data name="MSGBoxAbortedCaption" xml:space="preserve">
+    <value>Aborted</value>
+  </data>
+  <data name="MSGBoxConfirmCaption" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="NetworkNotConnectedCaption" xml:space="preserve">
+    <value>There is no Internet connection.</value>
   </data>
   <data name="NoresponseText" xml:space="preserve">
     <value>There was no response from mca-coh.</value>
@@ -272,6 +308,11 @@ Please wait a moment.</value>
   <data name="RetrievingText" xml:space="preserve">
     <value>Retrieving the list...</value>
   </data>
+  <data name="SiteOpenCaption" xml:space="preserve">
+    <value>You can update your application.
+
+Do you want to open the GitHub site?</value>
+  </data>
   <data name="SpecifyDumpFileCaption" xml:space="preserve">
     <value>Specify where to save the dump file(s)</value>
   </data>
@@ -282,6 +323,20 @@ Please wait a moment.</value>
     <value>Unable to recognize dongle.
 PS2 memory card (SCPH-10020) cannot be read.
 Only Sys2x6 dongle (COH-H10020) can be read.</value>
+  </data>
+  <data name="UnExpectedErrorCaption" xml:space="preserve">
+    <value>An error has occured.
+{0}</value>
+  </data>
+  <data name="UpdateCompletedCaption" xml:space="preserve">
+    <value>Update completed.</value>
+  </data>
+  <data name="UpdateConfirmCaption" xml:space="preserve">
+    <value>Application updates are available.
+Do you want to update?</value>
+  </data>
+  <data name="UptodateCaption" xml:space="preserve">
+    <value>You are using the latest version of the application.</value>
   </data>
   <data name="WarningCaption" xml:space="preserve">
     <value>Warning</value>

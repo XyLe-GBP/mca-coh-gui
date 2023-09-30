@@ -4,11 +4,21 @@ using static mca_coh_gui.src.Common;
 using mca_coh_gui.Localizations;
 using mca_coh_gui.src;
 using mca_coh_gui.src.Forms;
+using System.Net.NetworkInformation;
 
 namespace mca_coh_gui
 {
     public partial class FormMain : Form
     {
+        #region NetworkCommon
+        private static readonly HttpClientHandler handler = new()
+        {
+            UseProxy = false,
+            UseCookies = false
+        };
+        private static readonly HttpClient appUpdatechecker = new(handler);
+        #endregion
+
         private bool isfixed = false;
         private bool isshowdir = true;
         private bool iskeyautowrite = true;
@@ -34,12 +44,30 @@ namespace mca_coh_gui
 
             ReInitializeConfig();
 
+            if (File.Exists(Directory.GetCurrentDirectory() + @"\updated.dat"))
+            {
+                File.Delete(Directory.GetCurrentDirectory() + @"\updated.dat");
+                string updpath = Directory.GetCurrentDirectory()[..Directory.GetCurrentDirectory().LastIndexOf('\\')];
+                File.Delete(updpath + @"\updater.exe");
+                File.Delete(updpath + @"\mca-coh-gui.zip");
+                Common.Utils.DeleteDirectory(updpath + @"\updater-temp");
+
+                MessageBox.Show(this, Localization.UpdateCompletedCaption, Localization.DoneCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                var update = Task.Run(() => CheckForUpdatesForInit());
+                update.Wait();
+            }
+
             string[] buffer = new string[1];
             if (!CheckUSBDevice(buffer))
             {
                 MessageBox.Show(this, buffer[0], "Critical Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
+
+            //timer_monitor.Start();
         }
 
         private void Button_Readlist_Click(object sender, EventArgs e)
@@ -106,10 +134,10 @@ namespace mca_coh_gui
                     }
                     if (!item.Contains("PS3") && !item.Contains("<dir>"))
                     {
-                        Match matchname = Regex.Match(item, "[a-z]*.[a-z]*[A-Z]*.[A-Z]*[0-9]*.[A-Z]*");
+                        Match matchname = Regex.Match(item, "[a-z]*.[a-z]*[A-Z]*.[A-Z]*[0-9]*.[A-Z]*[^ ]*[^ ]");
                         Match matchdate = Regex.Match(item, "[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])");
                         Match matchclock = Regex.Match(item, "([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$");
-                        Match matchsize = Regex.Match(item, "[0-9]{1,7}");
+                        Match matchsize = Regex.Match(item, "[ ][0-9]{2,7}");
                         list.Add(matchname.Value.Trim());
                         string[] data = { matchname.Value.Trim(), matchsize.Value, matchdate.Value, matchclock.Value };
                         listView_Readcontents.Items.Add(new ListViewItem(data));
@@ -784,32 +812,54 @@ namespace mca_coh_gui
             formBackups.ShowDialog();
         }
 
-        private bool CheckUSBDevice(string[] Infobuffer)
+        private static bool CheckUSBDevice(string[] Infobuffer)
         {
+            bool pnpIDs = Utils.CheckAdaptorPnPDevicesID();
+
+            if (!pnpIDs)
+            {
+                Infobuffer[0] = Localization.DeviceNotConnectedCaption;
+                return false;
+            }
+
             var usbDevices = Utils.GetUSBDevices();
+            var pnpDevices = Utils.GetPnPDevices();
 
             foreach (var usbDevice in usbDevices)
             {
-                Debug.WriteLine("Device ID: {0}, PNP Device ID: {1}, Description: {2}",
+                foreach (var pnpDevice in pnpDevices)
+                {
+                    Debug.WriteLine("Device ID: {0}, PNP Device ID: {1}, Description: {2}",
                     usbDevice.DeviceID, usbDevice.PnpDeviceID, usbDevice.Description);
-                if (usbDevice.Description.Contains("MemoryCard Adaptor with uusbd Driver (x64)") && usbDevice.DeviceID.Contains(@"USB\VID_054C&PID_02EA"))
-                {
-                    return true;
+                    Debug.WriteLine("Name: {0}, PNP Device ID: {1}, Service: {2}",
+                    pnpDevice.Name, pnpDevice.PnpDeviceID, pnpDevice.Service);
+
+
+                    if (pnpDevice.Service.Contains("libusbK") && pnpDevice.Name.Contains("PS3 MemoryCard Adaptor") && pnpIDs)
+                    {
+                        return true;
+                    }
+                    else if (usbDevice.Description.Contains("MemoryCard Adaptor with uusbd Driver (x64)") && pnpIDs)
+                    {
+                        return true;
+                    }
+                    else if (usbDevice.Description.Contains("MemoryCard Adaptor with uusbd Driver") && pnpIDs)
+                    {
+                        Infobuffer[0] = "'" + usbDevice.Description + "' is not the proper driver.";
+                        return false;
+                    }
+                    else
+                    {
+                        continue;
+                    }
                 }
-                else if (usbDevice.Description.Contains("MemoryCard Adaptor with uusbd Driver") && usbDevice.DeviceID.Contains(@"USB\VID_054C&PID_02EA"))
-                {
-                    Infobuffer[0] = "'" + usbDevice.Description + "' is not the proper driver.";
-                    return false;
-                }
-                else if (usbDevice.DeviceID.Contains(@"USB\VID_054C&PID_02EA"))
-                {
-                    Infobuffer[0] = "The device is connected, but the driver is not installed.";
-                    return false;
-                }
-                else
-                {
-                    continue;
-                }
+
+            }
+
+            if (pnpIDs)
+            {
+                Infobuffer[0] = Localization.DriverNotInstalledCaption;
+                return false;
             }
             Infobuffer[0] = "The application cannot be started because the memory card adapter is not connected or the appropriate driver is not installed.";
             return false;
@@ -820,5 +870,246 @@ namespace mca_coh_gui
             e.Cancel = true;
             e.NewWidth = listView_Readcontents.Columns[e.ColumnIndex].Width;
         }
+
+        private void timer_monitor_Tick(object sender, EventArgs e)
+        {
+            bool isremoved = false, isconnected = false, flag = false;
+            bool pnpIDs = Utils.CheckAdaptorPnPDevicesID();
+
+            if (!pnpIDs)
+            {
+                isremoved = true;
+            }
+            if (pnpIDs)
+            {
+                isconnected = true;
+            }
+
+            if (isremoved && !flag)
+            {
+                MessageBox.Show(this, "The memory card adapter has been removed.", Localization.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isremoved = false;
+                flag = true;
+            }
+
+            if (isconnected && flag)
+            {
+                MessageBox.Show(this, "The memory card adapter has been connected.", Localization.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                isconnected = false;
+                flag = false;
+            }
+        }
+
+        private async void checkForUpdatesUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                try
+                {
+                    string hv = null!;
+
+                    using Stream hcs = await Task.Run(() => Common.Network.GetWebStreamAsync(appUpdatechecker, Common.Network.GetUri("https://raw.githubusercontent.com/XyLe-GBP/mca-coh-gui/master/VERSIONINFO")));
+                    using StreamReader hsr = new(hcs);
+                    hv = await Task.Run(() => hsr.ReadToEndAsync());
+                    Common.GitHubLatestVersion = hv[8..].Replace("\n", "");
+
+                    FileVersionInfo ver = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
+
+                    if (ver.FileVersion != null)
+                    {
+                        switch (ver.FileVersion.ToString().CompareTo(hv[8..].Replace("\n", "")))
+                        {
+                            case -1:
+                                DialogResult dr = MessageBox.Show(Localization.LatestCaption + hv[8..].Replace("\n", "") + "\n" + Localization.CurrentCaption + ver.FileVersion + "\n" + Localization.UpdateConfirmCaption, Localization.MSGBoxConfirmCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                if (dr == DialogResult.Yes)
+                                {
+                                    using FormSelectApplicationType formtype = new();
+                                    if (formtype.ShowDialog() == DialogResult.Cancel) return;
+
+                                    Common.ProgressType = 7;
+                                    Common.ProgressMax = 100;
+                                    using FormProgress form = new();
+                                    form.ShowDialog();
+
+                                    if (Common.Result == false)
+                                    {
+                                        Common.cts.Dispose();
+                                        MessageBox.Show(Localization.CancelledCaption, Localization.MSGBoxAbortedCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+
+                                    string updpath = Directory.GetCurrentDirectory()[..Directory.GetCurrentDirectory().LastIndexOf('\\')];
+                                    File.Move(Directory.GetCurrentDirectory() + @"\res\updater.exe", updpath + @"\updater.exe");
+                                    string wtext;
+                                    switch (Common.ApplicationPortable)
+                                    {
+                                        case false:
+                                            {
+                                                wtext = Directory.GetCurrentDirectory() + "\r\nrelease";
+                                            }
+                                            break;
+                                        case true:
+                                            {
+                                                wtext = Directory.GetCurrentDirectory() + "\r\nportable";
+                                            }
+                                            break;
+                                    }
+                                    File.WriteAllText(updpath + @"\updater.txt", wtext);
+                                    File.Move(updpath + @"\updater.txt", updpath + @"\updater.dat");
+                                    if (File.Exists(Directory.GetCurrentDirectory() + @"\res\mca-coh-gui.zip"))
+                                    {
+                                        File.Move(Directory.GetCurrentDirectory() + @"\res\mca-coh-gui.zip", updpath + @"\mca-coh-gui.zip");
+                                    }
+
+                                    ProcessStartInfo pi = new()
+                                    {
+                                        FileName = updpath + @"\updater.exe",
+                                        Arguments = null,
+                                        UseShellExecute = true,
+                                        WindowStyle = ProcessWindowStyle.Normal,
+                                    };
+                                    Process.Start(pi);
+                                    Close();
+                                    return;
+                                }
+                                else
+                                {
+                                    DialogResult dr2 = MessageBox.Show(this, Localization.LatestCaption + hv[8..].Replace("\n", "") + "\n" + Localization.CurrentCaption + ver.FileVersion + "\n" + Localization.SiteOpenCaption, Localization.MSGBoxConfirmCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                    if (dr2 == DialogResult.Yes)
+                                    {
+                                        Common.Utils.OpenURI("https://github.com/XyLe-GBP/mca-coh-gui/releases");
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        return;
+                                    }
+                                }
+                            case 0:
+                                MessageBox.Show(this, Localization.LatestCaption + hv[8..].Replace("\n", "") + "\n" + Localization.CurrentCaption + ver.FileVersion + "\n" + Localization.UptodateCaption, Localization.DoneCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                break;
+                            case 1:
+                                throw new Exception(hv[8..].Replace("\n", "").ToString() + " < " + ver.FileVersion.ToString());
+                        }
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, string.Format(Localization.UnExpectedErrorCaption, ex.ToString()), Localization.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, Localization.NetworkNotConnectedCaption, Localization.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private async Task CheckForUpdatesForInit()
+        {
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                try
+                {
+                    string hv = null!;
+
+                    using Stream hcs = await Task.Run(() => Common.Network.GetWebStreamAsync(appUpdatechecker, Common.Network.GetUri("https://raw.githubusercontent.com/XyLe-GBP/mca-coh-gui/master/VERSIONINFO")));
+                    using StreamReader hsr = new(hcs);
+                    hv = await Task.Run(() => hsr.ReadToEndAsync());
+                    Common.GitHubLatestVersion = hv[8..].Replace("\n", "");
+
+                    FileVersionInfo ver = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
+
+                    if (ver.FileVersion != null)
+                    {
+                        switch (ver.FileVersion.ToString().CompareTo(hv[8..].Replace("\n", "")))
+                        {
+                            case -1:
+                                DialogResult dr = MessageBox.Show(Localization.LatestCaption + hv[8..].Replace("\n", "") + "\n" + Localization.CurrentCaption + ver.FileVersion + "\n" + Localization.UpdateConfirmCaption, Localization.MSGBoxConfirmCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                if (dr == DialogResult.Yes)
+                                {
+                                    using FormSelectApplicationType formtype = new();
+                                    if (formtype.ShowDialog() == DialogResult.Cancel) return;
+
+                                    Common.ProgressType = 7;
+                                    Common.ProgressMax = 100;
+                                    using FormProgress form = new();
+                                    form.ShowDialog();
+
+                                    if (Common.Result == false)
+                                    {
+                                        Common.cts.Dispose();
+                                        MessageBox.Show(Localization.CancelledCaption, Localization.MSGBoxAbortedCaption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        return;
+                                    }
+
+                                    string updpath = Directory.GetCurrentDirectory()[..Directory.GetCurrentDirectory().LastIndexOf('\\')];
+                                    File.Move(Directory.GetCurrentDirectory() + @"\res\updater.exe", updpath + @"\updater.exe");
+                                    string wtext;
+                                    switch (Common.ApplicationPortable)
+                                    {
+                                        case false:
+                                            {
+                                                wtext = Directory.GetCurrentDirectory() + "\r\nrelease";
+                                            }
+                                            break;
+                                        case true:
+                                            {
+                                                wtext = Directory.GetCurrentDirectory() + "\r\nportable";
+                                            }
+                                            break;
+                                    }
+                                    File.WriteAllText(updpath + @"\updater.txt", wtext);
+                                    File.Move(updpath + @"\updater.txt", updpath + @"\updater.dat");
+                                    if (File.Exists(Directory.GetCurrentDirectory() + @"\res\mca-coh-gui.zip"))
+                                    {
+                                        File.Move(Directory.GetCurrentDirectory() + @"\res\mca-coh-gui.zip", updpath + @"\mca-coh-gui.zip");
+                                    }
+
+                                    ProcessStartInfo pi = new()
+                                    {
+                                        FileName = updpath + @"\updater.exe",
+                                        Arguments = null,
+                                        UseShellExecute = true,
+                                        WindowStyle = ProcessWindowStyle.Normal,
+                                    };
+                                    Process.Start(pi);
+                                    Close();
+                                    return;
+                                }
+                                else
+                                {
+                                    DialogResult dr2 = MessageBox.Show(Localization.LatestCaption + hv[8..].Replace("\n", "") + "\n" + Localization.CurrentCaption + ver.FileVersion + "\n" + Localization.SiteOpenCaption, Localization.MSGBoxConfirmCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                                    if (dr2 == DialogResult.Yes)
+                                    {
+                                        Common.Utils.OpenURI("https://github.com/XyLe-GBP/mca-coh-gui/releases");
+                                        return;
+                                    }
+                                    else
+                                    {
+                                        return;
+                                    }
+                                }
+                            case 0:
+                                break;
+                            case 1:
+                                throw new Exception(hv[8..].Replace("\n", "").ToString() + " < " + ver.FileVersion.ToString());
+                        }
+                        return;
+                    }
+                }
+                catch (Exception)
+                {
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             menuStrip1 = new MenuStrip();
             fileFToolStripMenuItem = new ToolStripMenuItem();
@@ -56,6 +57,9 @@
             button_dumpimg = new Button();
             button_getinfo = new Button();
             button_remove = new Button();
+            timer_monitor = new System.Windows.Forms.Timer(components);
+            toolStripMenuItem1 = new ToolStripSeparator();
+            checkForUpdatesUToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip_Information.SuspendLayout();
             SuspendLayout();
@@ -81,7 +85,7 @@
             // helpHToolStripMenuItem
             // 
             helpHToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            helpHToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutAToolStripMenuItem });
+            helpHToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutAToolStripMenuItem, toolStripMenuItem1, checkForUpdatesUToolStripMenuItem });
             helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
             resources.ApplyResources(helpHToolStripMenuItem, "helpHToolStripMenuItem");
             // 
@@ -229,6 +233,21 @@
             button_remove.UseVisualStyleBackColor = true;
             button_remove.Click += Button_remove_Click;
             // 
+            // timer_monitor
+            // 
+            timer_monitor.Tick += timer_monitor_Tick;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // checkForUpdatesUToolStripMenuItem
+            // 
+            checkForUpdatesUToolStripMenuItem.Name = "checkForUpdatesUToolStripMenuItem";
+            resources.ApplyResources(checkForUpdatesUToolStripMenuItem, "checkForUpdatesUToolStripMenuItem");
+            checkForUpdatesUToolStripMenuItem.Click += checkForUpdatesUToolStripMenuItem_Click;
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -249,6 +268,7 @@
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "FormMain";
             Load += FormMain_Load;
             menuStrip1.ResumeLayout(false);
@@ -288,5 +308,8 @@
         private Button button_remove;
         private ToolStripMenuItem toolsTToolStripMenuItem;
         private ToolStripMenuItem backupsBToolStripMenuItem;
+        private System.Windows.Forms.Timer timer_monitor;
+        private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem checkForUpdatesUToolStripMenuItem;
     }
 }

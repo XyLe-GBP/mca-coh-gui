@@ -10,6 +10,8 @@ namespace mca_coh_gui.src
 {
     public class Common
     {
+        public static CancellationTokenSource cts = null!;
+
         internal static readonly string CurrentDir = Directory.GetCurrentDirectory();
         internal static readonly string ResourcesDir = Directory.GetCurrentDirectory() + @"\res";
         internal static readonly string mcaApplicationPath = Directory.GetCurrentDirectory() + @"\res\mca-coh.exe";
@@ -30,6 +32,17 @@ namespace mca_coh_gui.src
         internal static bool IsGetInfo = false;
 
         internal static bool Locationisfixed = false;
+
+        /// <summary>
+        /// ダウンロード機能用変数
+        /// </summary>
+        public static System.Net.WebClient downloadClient = null!;
+        public static bool IsDownloading = false;
+        public static string DownloadedStatus = "";
+        public static int DownloadProgress = 0;
+
+        public static bool ApplicationPortable = false;
+        public static string? GitHubLatestVersion;
 
         public class Generals
         {
@@ -901,9 +914,39 @@ namespace mca_coh_gui.src
                 return false;
             }
 
+            public static List<PnPDeviceInfo> GetPnPDevices()
+            {
+                List<PnPDeviceInfo> list = new();
+                ManagementClass device = new("Win32_PnPEntity");
+                foreach (ManagementObject dev in device.GetInstances())
+                {
+                    string name = (string)dev.GetPropertyValue("Service");
+                    if (name is not null) list.Add(new PnPDeviceInfo(
+                        (string)dev.GetPropertyValue("Name"),
+                        (string)dev.GetPropertyValue("PNPDeviceID"),
+                        (string)dev.GetPropertyValue("Service")
+                        ));
+                }
+                return list;
+            }
+
+            public static bool CheckAdaptorPnPDevicesID()
+            {
+                ManagementClass device = new("Win32_PnPEntity");
+                foreach (ManagementObject dev in device.GetInstances())
+                {
+                    string name = (string)dev.GetPropertyValue("PNPDeviceID");
+                    if (name.Contains(@"USB\VID_054C&PID_02EA"))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
             public static List<USBDeviceInfo> GetUSBDevices()
             {
-                List<USBDeviceInfo> devices = new List<USBDeviceInfo>();
+                List<USBDeviceInfo> devices = new();
 
                 ManagementObjectCollection collection;
                 using (var searcher = new ManagementObjectSearcher(@"Select * From Win32_USBHub"))
@@ -934,6 +977,51 @@ namespace mca_coh_gui.src
             public string DeviceID { get; private set; }
             public string PnpDeviceID { get; private set; }
             public string Description { get; private set; }
+        }
+
+        public class PnPDeviceInfo
+        {
+            public PnPDeviceInfo(string name, string pnpDeviceID, string service)
+            {
+                this.Name = name;
+                this.PnpDeviceID = pnpDeviceID;
+                this.Service = service;
+            }
+            public string Name { get; private set; }
+            public string PnpDeviceID { get; private set; }
+            public string Service { get; private set; }
+        }
+
+        /// <summary>
+        /// ネットワーク系関数
+        /// </summary>
+        internal class Network
+        {
+            /// <summary>
+            /// 文字列をURIに変換
+            /// </summary>
+            /// <param name="uri">URI文字列</param>
+            /// <returns></returns>
+            public static Uri GetUri(string uri)
+            {
+                return new Uri(uri);
+            }
+
+            public static Stream GetWebStream(HttpClient httpClient, Uri uri)
+            {
+                return httpClient.GetStreamAsync(uri).Result;
+            }
+
+            public static async Task<Stream> GetWebStreamAsync(HttpClient httpClient, Uri uri)
+            {
+                return await httpClient.GetStreamAsync(uri);
+            }
+
+            public static async Task<Image> GetWebImageAsync(HttpClient httpClient, Uri uri)
+            {
+                using Stream stream = await GetWebStreamAsync(httpClient, uri);
+                return Image.FromStream(stream);
+            }
         }
 
         public class Config

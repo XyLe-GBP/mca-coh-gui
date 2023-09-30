@@ -34,6 +34,11 @@ namespace mca_coh_gui
                     MessageBox.Show("The required file 'mca-coh.exe' does not exist.\nClose the application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (!File.Exists(Directory.GetCurrentDirectory() + @"\res\updater.exe"))
+                {
+                    MessageBox.Show("The required file 'updater.exe' does not exist.\nClose the application.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 ApplicationConfiguration.Initialize();
                 Application.Run(new FormMain());

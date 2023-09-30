@@ -28,81 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.label_Progress = new System.Windows.Forms.Label();
-            this.progressBar_MainProgress = new System.Windows.Forms.ProgressBar();
-            this.label_log1 = new System.Windows.Forms.Label();
-            this.label_log2 = new System.Windows.Forms.Label();
-            this.timer_interval = new System.Windows.Forms.Timer(this.components);
-            this.label_log3 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            label_Progress = new Label();
+            progressBar_MainProgress = new ProgressBar();
+            label_log1 = new Label();
+            label_log2 = new Label();
+            timer_interval = new System.Windows.Forms.Timer(components);
+            label_log3 = new Label();
+            button_Abort = new Button();
+            SuspendLayout();
             // 
             // label_Progress
             // 
-            this.label_Progress.Location = new System.Drawing.Point(12, 9);
-            this.label_Progress.Name = "label_Progress";
-            this.label_Progress.Size = new System.Drawing.Size(560, 39);
-            this.label_Progress.TabIndex = 0;
-            this.label_Progress.Text = "ProgressLabel";
-            this.label_Progress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label_Progress.Location = new Point(12, 9);
+            label_Progress.Name = "label_Progress";
+            label_Progress.Size = new Size(560, 39);
+            label_Progress.TabIndex = 0;
+            label_Progress.Text = "ProgressLabel";
+            label_Progress.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // progressBar_MainProgress
             // 
-            this.progressBar_MainProgress.Location = new System.Drawing.Point(12, 51);
-            this.progressBar_MainProgress.Name = "progressBar_MainProgress";
-            this.progressBar_MainProgress.Size = new System.Drawing.Size(560, 13);
-            this.progressBar_MainProgress.TabIndex = 1;
+            progressBar_MainProgress.Location = new Point(12, 51);
+            progressBar_MainProgress.Name = "progressBar_MainProgress";
+            progressBar_MainProgress.Size = new Size(560, 13);
+            progressBar_MainProgress.TabIndex = 1;
             // 
             // label_log1
             // 
-            this.label_log1.AutoSize = true;
-            this.label_log1.Location = new System.Drawing.Point(12, 67);
-            this.label_log1.Name = "label_log1";
-            this.label_log1.Size = new System.Drawing.Size(61, 15);
-            this.label_log1.TabIndex = 2;
-            this.label_log1.Text = "LogLabel1";
+            label_log1.AutoSize = true;
+            label_log1.Location = new Point(12, 67);
+            label_log1.Name = "label_log1";
+            label_log1.Size = new Size(61, 15);
+            label_log1.TabIndex = 2;
+            label_log1.Text = "LogLabel1";
             // 
             // label_log2
             // 
-            this.label_log2.AutoSize = true;
-            this.label_log2.Location = new System.Drawing.Point(12, 97);
-            this.label_log2.Name = "label_log2";
-            this.label_log2.Size = new System.Drawing.Size(61, 15);
-            this.label_log2.TabIndex = 3;
-            this.label_log2.Text = "LogLabel2";
+            label_log2.AutoSize = true;
+            label_log2.Location = new Point(12, 97);
+            label_log2.Name = "label_log2";
+            label_log2.Size = new Size(61, 15);
+            label_log2.TabIndex = 3;
+            label_log2.Text = "LogLabel2";
             // 
             // timer_interval
             // 
-            this.timer_interval.Tick += new System.EventHandler(this.Timer_interval_Tick);
+            timer_interval.Tick += Timer_interval_Tick;
             // 
             // label_log3
             // 
-            this.label_log3.AutoSize = true;
-            this.label_log3.Location = new System.Drawing.Point(12, 112);
-            this.label_log3.Name = "label_log3";
-            this.label_log3.Size = new System.Drawing.Size(61, 15);
-            this.label_log3.TabIndex = 4;
-            this.label_log3.Text = "LogLabel3";
+            label_log3.AutoSize = true;
+            label_log3.Location = new Point(12, 112);
+            label_log3.Name = "label_log3";
+            label_log3.Size = new Size(61, 15);
+            label_log3.TabIndex = 4;
+            label_log3.Text = "LogLabel3";
+            // 
+            // button_Abort
+            // 
+            button_Abort.Location = new Point(497, 112);
+            button_Abort.Name = "button_Abort";
+            button_Abort.Size = new Size(75, 23);
+            button_Abort.TabIndex = 5;
+            button_Abort.Text = "Abort";
+            button_Abort.UseVisualStyleBackColor = true;
+            button_Abort.Click += button_Abort_Click;
             // 
             // FormProgress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 136);
-            this.ControlBox = false;
-            this.Controls.Add(this.label_log3);
-            this.Controls.Add(this.label_log2);
-            this.Controls.Add(this.label_log1);
-            this.Controls.Add(this.progressBar_MainProgress);
-            this.Controls.Add(this.label_Progress);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "FormProgress";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProgress";
-            this.Load += new System.EventHandler(this.FormProgress_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(584, 146);
+            ControlBox = false;
+            Controls.Add(button_Abort);
+            Controls.Add(label_log3);
+            Controls.Add(label_log2);
+            Controls.Add(label_log1);
+            Controls.Add(progressBar_MainProgress);
+            Controls.Add(label_Progress);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Name = "FormProgress";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormProgress";
+            Load += FormProgress_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -113,5 +124,6 @@
         private Label label_log2;
         private System.Windows.Forms.Timer timer_interval;
         private Label label_log3;
+        private Button button_Abort;
     }
 }

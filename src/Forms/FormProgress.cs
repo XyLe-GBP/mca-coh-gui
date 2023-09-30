@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using static mca_coh_gui.src.Common;
 using mca_coh_gui.Localizations;
+using System.ComponentModel;
 
 namespace mca_coh_gui
 {
@@ -10,6 +11,9 @@ namespace mca_coh_gui
         {
             InitializeComponent();
         }
+
+        private int DownloadProgress = 0;
+        private string DownloadStatus = "";
 
         private void FormProgress_Load(object sender, EventArgs e)
         {
@@ -97,6 +101,16 @@ namespace mca_coh_gui
                         var p = new Progress<int>(UpdateProgress);
 
                         Result = await Task.Run(() => Format_DoWork(p, cT));
+                    }
+                    break;
+                case 7: // Update
+                    {
+                        label_Progress.Text = Localization.ProcessingText;
+                        cts = new CancellationTokenSource();
+                        var cT = cts.Token;
+                        var p = new Progress<int>(UpdateProgress);
+
+                        Result = await Task.Run(() => Download_DoWork(p, cT));
                     }
                     break;
                 default:
@@ -365,6 +379,113 @@ namespace mca_coh_gui
             return true;
         }
 
+        private bool Download_DoWork(IProgress<int> p, CancellationToken cToken)
+        {
+            if (downloadClient == null)
+            {
+#pragma warning disable SYSLIB0014 // 型またはメンバーが旧型式です
+                downloadClient = new System.Net.WebClient();
+#pragma warning restore SYSLIB0014 // 型またはメンバーが旧型式です
+                downloadClient.DownloadProgressChanged += new System.Net.DownloadProgressChangedEventHandler(DownloadClient_DownloadProgressChanged);
+                downloadClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadClient_DownloadFileCompleted);
+            }
+
+            Invoke(new Action(() => Text = Localization.FormDownloadingCaption));
+            var task = Download(cToken);
+
+            while (task.IsCompleted != true)
+            {
+                if (task.Result == false)
+                {
+                    return false;
+                }
+            }
+            if (cToken.IsCancellationRequested == true)
+            {
+                return false;
+            }
+            else
+            {
+                Invoke(new Action(() => Text = Localization.ProcessingText));
+                Invoke(new Action(() => label_Progress.Text = Localization.ProcessingText));
+                Invoke(new Action(() => button_Abort.Enabled = false));
+            }
+
+            return true;
+        }
+
+        private async Task<bool> Download(CancellationToken cToken)
+        {
+            Uri uri;
+
+            switch (ApplicationPortable)
+            {
+                case false:
+                    {
+                        uri = new("https://github.com/XyLe-GBP/mca-coh-gui/releases/download/v" + GitHubLatestVersion + "/mca-coh-gui-release.zip");
+                    }
+                    break;
+                case true:
+                    {
+                        uri = new("https://github.com/XyLe-GBP/mca-coh-gui/releases/download/v" + GitHubLatestVersion + "/mca-coh-gui-portable.zip");
+                    }
+                    break;
+            }
+
+            switch (ApplicationPortable)
+            {
+                case false: // release
+                    {
+                        downloadClient.DownloadFileAsync(uri, Directory.GetCurrentDirectory() + @"\res\mca-coh-gui.zip");
+                    }
+                    break;
+                case true: // portable
+                    {
+                        downloadClient.DownloadFileAsync(uri, Directory.GetCurrentDirectory() + @"\res\mca-coh-gui.zip");
+                    }
+                    break;
+            }
+            IsDownloading = true;
+
+            while (downloadClient.IsBusy)
+            {
+                if (cToken.IsCancellationRequested == true)
+                {
+                    return await Task.FromResult(false);
+                }
+                Invoke(new Action(() => progressBar_MainProgress.Value = DownloadProgress));
+                Invoke(new Action(() => label_log1.Text = DownloadStatus));
+            }
+            return await Task.FromResult(true);
+        }
+
+        private void DownloadClient_DownloadProgressChanged(object sender, System.Net.DownloadProgressChangedEventArgs e)
+        {
+            if (IsDownloading == true)
+            {
+                progressBar_MainProgress.Maximum = 100;
+                IsDownloading = false;
+            }
+            DownloadProgress = e.ProgressPercentage;
+            DownloadStatus = string.Format(Localization.DownloadingCaption, e.ProgressPercentage, e.TotalBytesToReceive / 1024, e.BytesReceived / 1024);
+        }
+
+        private void DownloadClient_DownloadFileCompleted(object? sender, AsyncCompletedEventArgs e)
+        {
+            if (e.Cancelled) // Cancelled
+            {
+                downloadClient!.Dispose();
+            }
+            else if (e.Error != null) // Error
+            {
+                downloadClient!.Dispose();
+            }
+            else
+            {
+                downloadClient!.Dispose();
+            }
+        }
+
         private void UpdateProgress(int p)
         {
             switch (ProgressType)
@@ -390,6 +511,32 @@ namespace mca_coh_gui
         {
             System.Media.SystemSounds.Asterisk.Play();
             Close();
+        }
+
+        private void button_Abort_Click(object sender, EventArgs e)
+        {
+            if (cts != null)
+            {
+                if (downloadClient.IsBusy)
+                {
+                    DialogResult dr = MessageBox.Show(Localization.DownloadAbortConfirmCaption, Localization.WarningCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (dr == DialogResult.Yes)
+                    {
+                        cts.Cancel();
+                        downloadClient.CancelAsync();
+                        Close();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    cancel.Cancel();
+                    Close();
+                }
+            }
         }
     }
 }

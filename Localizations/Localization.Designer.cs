@@ -72,6 +72,15 @@ namespace mca_coh_gui.Localizations {
         }
         
         /// <summary>
+        ///   The process was aborted. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CancelledCaption {
+            get {
+                return ResourceManager.GetString("CancelledCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Memory Card Formated. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string CardFormattedText {
@@ -90,11 +99,59 @@ namespace mca_coh_gui.Localizations {
         }
         
         /// <summary>
+        ///   Current version: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string CurrentCaption {
+            get {
+                return ResourceManager.GetString("CurrentCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The application cannot be started because the device is not connected. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DeviceNotConnectedCaption {
+            get {
+                return ResourceManager.GetString("DeviceNotConnectedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Done に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DoneCaption {
             get {
                 return ResourceManager.GetString("DoneCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Download is currently in progress. If you stop the download, the downloaded data will be lost.
+        ///Are you sure you want to continue? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DownloadAbortConfirmCaption {
+            get {
+                return ResourceManager.GetString("DownloadAbortConfirmCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0} KiB out of {1} KiB downloaded. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DownloadingCaption {
+            get {
+                return ResourceManager.GetString("DownloadingCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   The device is connected, but the driver is not installed.
+        ///
+        ///The application cannot be started. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DriverNotInstalledCaption {
+            get {
+                return ResourceManager.GetString("DriverNotInstalledCaption", resourceCulture);
             }
         }
         
@@ -325,6 +382,15 @@ namespace mca_coh_gui.Localizations {
         }
         
         /// <summary>
+        ///   Downloading... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FormDownloadingCaption {
+            get {
+                return ResourceManager.GetString("FormDownloadingCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   ID: {0}
         ///Name: {1}
         ///Maker: {2}
@@ -382,6 +448,42 @@ namespace mca_coh_gui.Localizations {
         internal static string KeyVerifyedText {
             get {
                 return ResourceManager.GetString("KeyVerifyedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Latest version: に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string LatestCaption {
+            get {
+                return ResourceManager.GetString("LatestCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Aborted に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSGBoxAbortedCaption {
+            get {
+                return ResourceManager.GetString("MSGBoxAbortedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Confirm に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSGBoxConfirmCaption {
+            get {
+                return ResourceManager.GetString("MSGBoxConfirmCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   There is no Internet connection. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string NetworkNotConnectedCaption {
+            get {
+                return ResourceManager.GetString("NetworkNotConnectedCaption", resourceCulture);
             }
         }
         
@@ -486,6 +588,17 @@ namespace mca_coh_gui.Localizations {
         }
         
         /// <summary>
+        ///   You can update your application.
+        ///
+        ///Do you want to open the GitHub site? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string SiteOpenCaption {
+            get {
+                return ResourceManager.GetString("SiteOpenCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Specify where to save the dump file(s) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string SpecifyDumpFileCaption {
@@ -511,6 +624,44 @@ namespace mca_coh_gui.Localizations {
         internal static string UnableRecognizeText {
             get {
                 return ResourceManager.GetString("UnableRecognizeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   An error has occured.
+        ///{0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UnExpectedErrorCaption {
+            get {
+                return ResourceManager.GetString("UnExpectedErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Update completed. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UpdateCompletedCaption {
+            get {
+                return ResourceManager.GetString("UpdateCompletedCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Application updates are available.
+        ///Do you want to update? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UpdateConfirmCaption {
+            get {
+                return ResourceManager.GetString("UpdateConfirmCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You are using the latest version of the application. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string UptodateCaption {
+            get {
+                return ResourceManager.GetString("UptodateCaption", resourceCulture);
             }
         }
         

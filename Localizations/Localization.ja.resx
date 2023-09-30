@@ -122,14 +122,34 @@
 
 キーの書き換えを行わずにドングルにファイルを書き込みます。</value>
   </data>
+  <data name="CancelledCaption" xml:space="preserve">
+    <value>処理が中断されました。</value>
+  </data>
   <data name="CardFormattedText" xml:space="preserve">
     <value>メモリーカードをフォーマットしました。</value>
   </data>
   <data name="CompleteRetrievingText" xml:space="preserve">
     <value>ファイルリストの取得成功</value>
   </data>
+  <data name="CurrentCaption" xml:space="preserve">
+    <value>現在のバージョン：</value>
+  </data>
+  <data name="DeviceNotConnectedCaption" xml:space="preserve">
+    <value>デバイスが接続されていないため、アプリケーションを開始できません。</value>
+  </data>
   <data name="DoneCaption" xml:space="preserve">
     <value>完了</value>
+  </data>
+  <data name="DownloadAbortConfirmCaption" xml:space="preserve">
+    <value>現在ダウンロードが進行中です。ダウンロードを中止すると
+ダウンロードしたデータは失われます。本当に続行しますか？</value>
+  </data>
+  <data name="DownloadingCaption" xml:space="preserve">
+    <value>{1} KiB 中 {0} KiB をダウンロードしました。</value>
+  </data>
+  <data name="DriverNotInstalledCaption" xml:space="preserve">
+    <value>デバイスは接続されていますが、ドライバーがインストールされていないため
+アプリケーションを開始できません。</value>
   </data>
   <data name="DumpCompletedText" xml:space="preserve">
     <value>ダンプ完了</value>
@@ -213,6 +233,9 @@
   <data name="FormattingText" xml:space="preserve">
     <value>フォーマット中…</value>
   </data>
+  <data name="FormDownloadingCaption" xml:space="preserve">
+    <value>ダウンロード中…</value>
+  </data>
   <data name="GetInfoText" xml:space="preserve">
     <value>ID: {0}
 Name: {1}
@@ -237,6 +260,18 @@ Maker: {2}
 キーデータ： {1}
 キーの検証に成功しました。
 続けてファイルをドングルに書き込みます。</value>
+  </data>
+  <data name="LatestCaption" xml:space="preserve">
+    <value>最新バージョン：</value>
+  </data>
+  <data name="MSGBoxAbortedCaption" xml:space="preserve">
+    <value>中止</value>
+  </data>
+  <data name="MSGBoxConfirmCaption" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="NetworkNotConnectedCaption" xml:space="preserve">
+    <value>インターネット接続がありません。</value>
   </data>
   <data name="NoresponseText" xml:space="preserve">
     <value>mca-cohからの応答がありませんでした。</value>
@@ -272,6 +307,10 @@ Maker: {2}
   <data name="RetrievingText" xml:space="preserve">
     <value>ファイルリストを取得中…</value>
   </data>
+  <data name="SiteOpenCaption" xml:space="preserve">
+    <value>アプリケーションのアップデートが可能です。
+GitHubのサイトを開きますか？</value>
+  </data>
   <data name="SpecifyDumpFileCaption" xml:space="preserve">
     <value>ダンプしたファイルの保存先を指定</value>
   </data>
@@ -282,6 +321,20 @@ Maker: {2}
     <value>ドングルを読み込めません。
 PS2用メモリーカード (SCPH-10020) は読み込めません。
 Sys2x6専用ドングル (COH-H10020) のみ読み込めます。</value>
+  </data>
+  <data name="UnExpectedErrorCaption" xml:space="preserve">
+    <value>エラーが発生しました。
+{0}</value>
+  </data>
+  <data name="UpdateCompletedCaption" xml:space="preserve">
+    <value>アップデートが完了しました。</value>
+  </data>
+  <data name="UpdateConfirmCaption" xml:space="preserve">
+    <value>アプリケーションのアップデートが可能です。
+アップデートを行いますか？</value>
+  </data>
+  <data name="UptodateCaption" xml:space="preserve">
+    <value>最新バージョンのアプリケーションをお使いです。</value>
   </data>
   <data name="WarningCaption" xml:space="preserve">
     <value>警告</value>
