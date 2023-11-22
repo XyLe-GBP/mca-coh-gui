@@ -8,8 +8,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Copyright>Copyright © 2023 - XyLe, All Rights Reserved.</Copyright>
-    <AssemblyVersion>0.6.2320.930</AssemblyVersion>
-    <FileVersion>0.6.2320.930</FileVersion>
+    <AssemblyVersion>0.7.2320.1122</AssemblyVersion>
+    <FileVersion>0.7.2320.1122</FileVersion>
     <Company>XyLe</Company>
     <Product>mca-coh gui</Product>
     <Description>COH dongle backup tool for Sys2x6.</Description>

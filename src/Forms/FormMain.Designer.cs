@@ -246,7 +246,7 @@
             // 
             checkForUpdatesUToolStripMenuItem.Name = "checkForUpdatesUToolStripMenuItem";
             resources.ApplyResources(checkForUpdatesUToolStripMenuItem, "checkForUpdatesUToolStripMenuItem");
-            checkForUpdatesUToolStripMenuItem.Click += checkForUpdatesUToolStripMenuItem_Click;
+            checkForUpdatesUToolStripMenuItem.Click += CheckForUpdatesUToolStripMenuItem_Click;
             // 
             // FormMain
             // 

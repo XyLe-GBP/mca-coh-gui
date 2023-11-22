@@ -3,7 +3,6 @@ using System.Text;
 using System.Xml.Serialization;
 using System.Xml;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Management;
 
 namespace mca_coh_gui.src
@@ -19,7 +18,7 @@ namespace mca_coh_gui.src
         internal static string[]? Donglefilenames;
         internal static string? ListviewName;
         internal static string? SaveLocation;
-        internal static string? Bootbin_Location;
+        internal static string? Bootbin_Location = "";
 
         internal static CancellationTokenSource? cancel;
         internal static int ProgressType = 0;　// 処理タイプ
@@ -224,7 +223,7 @@ namespace mca_coh_gui.src
                     RedirectStandardOutput = true,
                 };
                 Process? ps = Process.Start(psi);
-                ps.WaitForExit();
+                ps?.WaitForExit();
                 return;
             }
 
@@ -239,7 +238,7 @@ namespace mca_coh_gui.src
                     RedirectStandardOutput = true,
                 };
                 Process? ps = Process.Start(psi);
-                ps.WaitForExit();
+                ps?.WaitForExit();
                 return;
             }
 
@@ -397,14 +396,14 @@ namespace mca_coh_gui.src
 
                             Debug.Write("r_keydata: " + CheckRWByte(r_data));
 
-                            using var fswrite = new FileStream(Bootbin_Location, FileMode.Open);
+                            using var fswrite = new FileStream(Bootbin_Location!, FileMode.Open);
                             using var bw = new BinaryWriter(fswrite);
                             bw.Seek(40, SeekOrigin.Begin);
                             bw.Write(r_data);
 
                             Debug.Write("w_keydata: " + CheckRWByte(r_data));
 
-                            return Bootbin_Location;
+                            return Bootbin_Location!;
                         }
                     default:
                         {

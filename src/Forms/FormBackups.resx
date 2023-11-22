@@ -117,6 +117,439 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader_ODate.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;button_Cancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="restoreRToolStripMenuItem.Text" xml:space="preserve">
+    <value>Restore (&amp;R)</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Key.Name" xml:space="preserve">
+    <value>columnHeader_Key</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tabControl_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 412</value>
+  </data>
+  <data name="listView_Changed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>741, 378</value>
+  </data>
+  <data name="columnHeader_GameName.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="&gt;&gt;button_OK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_OKey.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button_Cancel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="columnHeader_OFileName.Text" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="columnHeader_Key.Text" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="label_NBackup.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 20.25pt</value>
+  </data>
+  <data name="tabControl_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 460</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Main.Name" xml:space="preserve">
+    <value>tabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;listView_Changed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_ONBackup.Text" xml:space="preserve">
+    <value>No Backup.</value>
+  </data>
+  <data name="label_ONBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label_NBackup.Name" xml:space="preserve">
+    <value>label_NBackup</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Main.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;deleteDToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_FileName.Name" xml:space="preserve">
+    <value>columnHeader_FileName</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="columnHeader_OKey.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="label_NBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Backuped Boot File(s)</value>
+  </data>
+  <data name="columnHeader_GameName.Text" xml:space="preserve">
+    <value>Gamename</value>
+  </data>
+  <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete (&amp;D)</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="openFileLocationOToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="button_OK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="restoreRToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 9pt, style=Bold</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>747, 384</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;restoreRToolStripMenuItem.Name" xml:space="preserve">
+    <value>restoreRToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="listView_Original.Size" type="System.Drawing.Size, System.Drawing">
+    <value>741, 378</value>
+  </data>
+  <data name="&gt;&gt;label_NBackup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileLocationOToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label_ONBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 378</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView_Changed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_Main.Name" xml:space="preserve">
+    <value>contextMenuStrip_Main</value>
+  </data>
+  <data name="button_Cancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="label_NBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="&gt;&gt;deleteDToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteDToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl_Main</value>
+  </data>
+  <data name="button_Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="label_ONBackup.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 20.25pt</value>
+  </data>
+  <data name="columnHeader_OGameName.Text" xml:space="preserve">
+    <value>Gamename</value>
+  </data>
+  <data name="&gt;&gt;tabControl_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="columnHeader_ODate.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="button_OK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_OGameName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_NBackup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="openFileLocationOToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open File Location (&amp;O)</value>
+  </data>
+  <data name="columnHeader_OGameName.Width" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="button_Cancel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button_OK.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="columnHeader_FileName.Text" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="&gt;&gt;button_OK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Date.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_Cancel.Name" xml:space="preserve">
+    <value>button_Cancel</value>
+  </data>
+  <data name="&gt;&gt;listView_Original.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnHeader_Key.Width" type="System.Int32, mscorlib">
+    <value>320</value>
+  </data>
+  <data name="listView_Original.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_FileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_ODate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label_NBackup.Text" xml:space="preserve">
+    <value>No Backup.</value>
+  </data>
+  <data name="columnHeader_FileName.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;label_ONBackup.Name" xml:space="preserve">
+    <value>label_ONBackup</value>
+  </data>
+  <data name="restoreRToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 22</value>
+  </data>
+  <data name="checkBox_HKeys.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 19</value>
+  </data>
+  <data name="&gt;&gt;label_ONBackup.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="label_ONBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 3</value>
+  </data>
+  <data name="&gt;&gt;listView_Changed.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;checkBox_HKeys.Name" xml:space="preserve">
+    <value>checkBox_HKeys</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_OGameName.Name" xml:space="preserve">
+    <value>columnHeader_OGameName</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;openFileLocationOToolStripMenuItem.Name" xml:space="preserve">
+    <value>openFileLocationOToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Date.Name" xml:space="preserve">
+    <value>columnHeader_Date</value>
+  </data>
+  <data name="checkBox_HKeys.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 433</value>
+  </data>
+  <data name="&gt;&gt;checkBox_HKeys.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBox_HKeys.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormBackups</value>
+  </data>
+  <data name="listView_Original.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="columnHeader_Date.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Changed</value>
+  </data>
+  <data name="&gt;&gt;listView_Original.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="checkBox_HKeys.Text" xml:space="preserve">
+    <value>Hide Keys</value>
+  </data>
+  <data name="label_NBackup.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_GameName.Name" xml:space="preserve">
+    <value>columnHeader_GameName</value>
+  </data>
+  <data name="columnHeader_Date.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="deleteDToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic UI, 9pt, style=Bold</value>
+  </data>
+  <data name="columnHeader_OKey.Text" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl_Main</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;checkBox_HKeys.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="checkBox_HKeys.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="listView_Changed.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_OFileName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>747, 384</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;restoreRToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="listView_Changed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_OKey.Name" xml:space="preserve">
+    <value>columnHeader_OKey</value>
+  </data>
+  <data name="columnHeader_OFileName.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="&gt;&gt;listView_Changed.Name" xml:space="preserve">
+    <value>listView_Changed</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_OFileName.Name" xml:space="preserve">
+    <value>columnHeader_OFileName</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_ODate.Name" xml:space="preserve">
+    <value>columnHeader_ODate</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 6</value>
+  </data>
+  <data name="tabControl_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button_OK.Name" xml:space="preserve">
+    <value>button_OK</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_Key.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listView_Original.Name" xml:space="preserve">
+    <value>listView_Original</value>
+  </data>
+  <data name="&gt;&gt;listView_Original.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label_ONBackup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;button_OK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_NBackup.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button_Cancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="button_Cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>607, 430</value>
+  </data>
+  <data name="button_OK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>688, 430</value>
+  </data>
+  <data name="&gt;&gt;label_ONBackup.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;checkBox_HKeys.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label_ONBackup.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="label_NBackup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>747, 378</value>
+  </data>
+  <data name="&gt;&gt;contextMenuStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="contextMenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 76</value>
+  </data>
+  <data name="&gt;&gt;columnHeader_GameName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="contextMenuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

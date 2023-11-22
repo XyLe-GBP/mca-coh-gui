@@ -34,7 +34,7 @@ namespace mca_coh_gui
             FileVersionInfo ver = FileVersionInfo.GetVersionInfo(Application.ExecutablePath);
             if (ver.FileVersion != null)
             {
-                Text = "mca-coh gui ( build: " + ver.FileVersion.ToString() + "b )";
+                Text = "mca-coh-gui";
             }
 
             if (!File.Exists(Common.xmlpath))
@@ -67,7 +67,10 @@ namespace mca_coh_gui
                 Close();
             }
 
-            //timer_monitor.Start();
+            if (ver.FileVersion != null)
+            {
+                Text = "mca-coh gui ( build: " + ver.FileVersion.ToString() + "b )";
+            }
         }
 
         private void Button_Readlist_Click(object sender, EventArgs e)
@@ -900,7 +903,7 @@ namespace mca_coh_gui
             }
         }
 
-        private async void checkForUpdatesUToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void CheckForUpdatesUToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (NetworkInterface.GetIsNetworkAvailable())
             {

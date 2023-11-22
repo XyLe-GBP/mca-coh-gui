@@ -87,6 +87,7 @@
             // 
             // button_Abort
             // 
+            button_Abort.Enabled = false;
             button_Abort.Location = new Point(497, 112);
             button_Abort.Name = "button_Abort";
             button_Abort.Size = new Size(75, 23);
